@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.custom-clip-path {
+  clip-path: ellipse(280px 300px at 0% 0%);
+}
+
+@media (min-width: 320px) {
+  .custom-clip-path {
+    clip-path: ellipse(280px 300px at 20% 15%);
+  }
+  .custom-clip-path > h1 {
+    font-size: 2.4rem;
+  }
+  .custom-clip-path > h2 {
+    font-size: 1.3rem;
+  }
+  .custom-clip-path > p {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 370px) {
+  .custom-clip-path {
+    clip-path: ellipse(300px 320px at 24% 15%);
+  }
+  .custom-clip-path > h1 {
+    font-size: 2.5rem;
+  }
+  .custom-clip-path > h2 {
+    font-size: 1.5rem;
+  }
+  .custom-clip-path > p {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 414px) {
+  .custom-clip-path {
+    clip-path: ellipse(370px 390px at 17% 18%);
+  }
+  .custom-clip-path > h1 {
+    font-size: 2.8rem;
+    margin-top: 50px;
+  }
+  .custom-clip-path > h2 {
+    font-size: 1.7rem;
+  }
+  .custom-clip-path > p {
+    font-size: 1.1rem;
+  }
+}
+
+
+
+@media (min-width: 567px) {
+  .custom-clip-path {
+    clip-path: ellipse(500px 340px at 28% -8%);
+  }
+    .custom-clip-path > h1 {
+    font-size: 2.5rem;
+    margin-top: 0px;
+  }
+    .custom-clip-path > h2 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 667px) {
+  .custom-clip-path {
+    clip-path: ellipse(500px 400px at 28% -8%);
+  }
+    .custom-clip-path > h1 {
+    font-size: 3rem;
+    margin-top: 0px;
+  }
+    .custom-clip-path > h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 736px) {
+  .custom-clip-path {
+    clip-path: ellipse(550px 490px at 38% -18%);
+  }
+    .custom-clip-path > h1 {
+    font-size: 4rem;
+    margin-top: 10px;
+  }
+    .custom-clip-path > h2 {
+    font-size: 2.5rem;
+  }
+      .custom-clip-path > p {
+    font-size: 1.3rem;
+    padding: 1px;
+  }
+}
+
+/*  --------------   */
+
+.footer-clip-path {
+  clip-path: ellipse(250px 280px at 0% -50%);
+}
+
+@media (min-width: 320px) {
+  .footer-clip-path {
+    clip-path: ellipse(280px 290px at 20% -70%);
+  }
+}
+
+@media (min-width: 370px) {
+  .footer-clip-path {
+    clip-path: ellipse(290px 300px at 30% -60%);
+  }
+}
+
+@media (min-width: 414px) {
+  .footer-clip-path {
+    clip-path: ellipse(300px 320px at 30% -60%);
+  }
+}
+
+@media (min-width: 567px) {
+  .footer-clip-path {
+    clip-path: ellipse(350px 300px at 40% -50%);
+  }
+}
+
+@media (min-width: 667px) {
+  .footer-clip-path {
+    clip-path: ellipse(380px 350px at 50% -70%);
+  }
+}
+
+@media (min-width: 736px) {
+  .footer-clip-path {
+    clip-path: ellipse(410px 320px at 50% -70%);
+  }
+}
