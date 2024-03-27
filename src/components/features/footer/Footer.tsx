@@ -17,7 +17,7 @@ export default function Footer() {
       name: "SERVICES",
     },
     {
-      path: "/portfolio",
+      path: "/#portfolio",
       name: "PORTFOLIO",
     },
     {
@@ -39,7 +39,7 @@ export default function Footer() {
 
   async function redirectURL() {
     "use server";
-    return redirect(`/ `);
+    return redirect(`/`);
   }
 
   return (
@@ -48,8 +48,8 @@ export default function Footer() {
       <div className="flex flex-col p-1">
         <Image src={"/logo/logo.png"} alt="logo" width={400} height={400} />
 
-        <div className=" flex flex-col justify-center items-start text-white">
-          <h5 className=" tracking-wide font-bold drop-shadow-2xl iPhone8:text-lg">
+        <div className=" flex flex-col justify-center items-start text-white xl:ml-10">
+          <h5 className=" tracking-wide font-bold drop-shadow-2xl iPhone8:text-lg xl:text-2xl">
             NAVIGATION
           </h5>
           <hr className=" w-[60%] border-[#ffbe4d]  border-[1px] outline-[#000] outline-8 h-1 shadow-xl bg-white bg-opacity-25 " />
@@ -57,14 +57,14 @@ export default function Footer() {
           <div className="flex items-center ">
             <div className="">
               <form action={redirectURL}>
-                {navigation.map((item) => (
+                {navigation.map((item, i: number) => (
                   <ul
-                    key={item.path}
+                    key={i}
                     className="text-xs text-left  iPhone5Landscape:text-lg"
                   >
                     <li
                       key={item.name}
-                      className="hover:drop-shadow-xl iPhone8:text-base  mt-1 font-semibold tracking-wide hover:text-gray-700 cursor-pointer"
+                      className="hover:drop-shadow-xl iPhone8:text-base  mt-1 font-semibold tracking-wide hover:text-gray-700 cursor-pointer xl:text-lg"
                     >
                       {item.name}
                     </li>
@@ -72,7 +72,7 @@ export default function Footer() {
                 ))}
               </form>
             </div>
-            <div className="iPhone5Landscape:ml-56 ml-32 opacity-80">
+            <div className="iPhone5Landscape:ml-56 ml-32 opacity-80 xl:ml-52">
               <Image
                 src={"/logo/2.png"}
                 alt="logo"
@@ -85,24 +85,25 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className=" flex flex-col justify-center items-end text-white">
-        <h5 className="iPhone8:text-lg tracking-wide font-bold drop-shadow-2xl mr-2 iPhone5Landscape:text-2xl">
+      <div className=" flex flex-col justify-center items-end text-white  xl:mr-10">
+        <h5 className=" xl:text-2xl iPhone8:text-lg tracking-wide font-bold drop-shadow-2xl mr-2 iPhone5Landscape:text-2xl">
           SERVICES
         </h5>
         <hr className=" w-[60%] border-[#ffbe4d]  border-[1px] outline-[#000] outline-8 h-1 shadow-xl bg-white bg-opacity-25 " />
-        {services.map((item) => (
+        <form action={redirectURL}>
+        {services.map((item, i: number) => (
           <ul
-            key={item.path}
+            key={i}
             className="text-xs iPhone8:text-base text-right mr-1 iPhone5Landscape:text-lg"
           >
             <li
               key={item.name}
-              className=" hover:drop-shadow-xl  mt-1 font-semibold tracking-wide hover:text-gray-700 cursor-pointer"
+              className="xl:text-lg hover:drop-shadow-xl  mt-1 font-semibold tracking-wide hover:text-gray-700 cursor-pointer"
             >
               {item.name}
             </li>
           </ul>
-        ))}
+        ))}</form>
       </div>
 
       <div className="xs:text-sm  iPhone8:text-base  text-center text-white font-bold flex flex-col mt-10 mb-3">
@@ -119,7 +120,8 @@ export default function Footer() {
 
       <div className="bg-black bg-opacity-20  mt-1 text-xs iPhone5Landscape:text-sm text-white py-2 text-center w-full font-semibold">
         <span>
-          Copyright © 2021 | Oak Harbor Web Designs | All Rights Reserved
+          Copyright © 2024 | Dev-Sol Web Designs & Development | All Rights
+          Reserved
         </span>
       </div>
     </footer>

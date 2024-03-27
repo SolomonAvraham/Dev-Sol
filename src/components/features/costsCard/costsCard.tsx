@@ -2,20 +2,23 @@ import Button from "../button/button";
 
 export default function CostsCard() {
   return (
-    <div className=" iPhone5:w-[13rem] iPhone5Landscape:w-[23rem] border-b-[5px] mt-7 min-h-full h-[22rem] iPhone5Landscape:h-[35rem] xs:w-[12rem] rounded shadow-lg mx-auto border-slate-200 border-[0.10px] flex flex-col items-center justify-around py-4 px-2">
-      <div className="iPhone5:w-[15rem] bg-orange-300 iPhone5Landscape:text-5xl xs:text-2xl iPhone5:text-4xl font-semibold text-center iPhone5Landscape:w-[25rem] xs:w-[13rem] shadow-2xl border-black rounded iPhone5Landscape:py-3 iPhone5:py-2 ">
+    <div className="xl:w-[16rem] xl:h-[32rem] iPhone5:w-[13rem]  border-b-[5px] mt-7 min-h-full h-[22rem] xs:w-[12rem] rounded-xl shadow-lg mx-auto border-slate-200 border-[0.10px] flex flex-col items-center justify-around py-4 px-2">
+      <div className="xl:w-[19rem] mt-3 border-[0.2px] iPhone5:w-[15rem] bg-orange-300 xs:text-2xl iPhone5:text-4xl font-semibold text-center xs:w-[13rem] shadow-2xl border-black rounded-lg  iPhone5:py-2 ">
         STANDARD
       </div>
-      <div className="xs:text-lg iPhone5:text-2xl  mt-4 iPhone5Landscape:text-3xl">
-        5 PAGES
-      </div>
-      <div className="xs:text-lg iPhone5Landscape:text-3xl">$ 150/MO</div>
-      <p className="xs:text-xs p-3 iPhone5Landscape:text-xl">
-        Unlimited Edits Includes Hosting 24/7 Customer Service Lifetime Updates
+      <hr className=" opacity-30 w-full bg-black mt-4" />
+      <div className="xs:text-lg iPhone5:text-2xl xl:text-5xl">5 PAGES</div>
+      <hr className="opacity-30 w-full bg-black" />
+      <div className="xs:text-lg xl:text-2xl">$ 100/MO</div>
+      <hr className="opacity-30 w-full bg-black" />
+      <p className="xs:text-xs p-3 xl:text-base">
+        Unlimited Edits, Includes Hosting 24/7, Customer Service and Lifetime
+        Updates
       </p>
+      <hr className="opacity-30 w-full bg-black" />
+
       <Button
         type={"submit"}
-        fontSize="xs"
         px="2"
         py="2"
         color="bg-gray-100 text-black mt-3 font-bold"

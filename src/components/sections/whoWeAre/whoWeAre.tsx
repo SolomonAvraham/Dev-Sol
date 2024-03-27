@@ -11,16 +11,19 @@ export default function WhoWeAre() {
         ---- <IoPeople />
         ----
       </div>
-      <p className="xs:text-lg p-3 iPhone5Landscape:text-xl">
-        My name is Ryan, I am a stay at home dad and web developer. I started
-        this business to help provide for the family while still being able to
-        be home and raise the kids. I spent a year and a half teaching myself
-        the right way to make websites and learning to write the code myself.
-        Now after being in business professionally for over 5 years I have built
-        hundreds websites and have my method down to a science. LEARN MORE
+      <p className="xs:text-lg p-3 xl:px-52">
+        My name is Solomon, and I'm a full-stack developer with a deep passion
+        for my profession. After dedicating over a year to self-study in
+        full-stack development, I've honed my skills to not just build websites,
+        but to craft digital experiences. My journey into web development was
+        driven by my desire to offer my expertise to clients while engaging in
+        work I truly love. Having built numerous sites, each project has been a
+        step in refining my approach and solidifying my commitment to
+        excellence. I'm here to bring your vision to life with dedication and
+        precision, eager to provide top-notch services to my clients.
       </p>
-      <div className="bg-black h-28 w-28 rounded-full mx-auto mt-5 iPhone5Landscape:h-64">
-        <div className="bg-white h-[5.6rem] w-[5.6rem] rounded-full mx-auto mt-5 iPhone5Landscape:h-64"></div>
+      <div className="bg-black h-28 w-28 rounded-full mx-auto mt-5 xl:h-64 xl:w-64">
+        <div className="bg-white h-[5.6rem] w-[5.6rem] rounded-full mx-auto mt-5 xl:h-64 xl:w-44"></div>
       </div>
       <h4 className="font-bold xs:text-xl iPhone5Landscape:text-5xl iPhone5Landscape:mt-8">
         Solomon<span className="text-orange-400">Avraham</span>.

@@ -7,19 +7,19 @@ export default function WhatWeDo() {
       icon: "/whatWeDo/1.png",
       header: "Mobile-First Design",
       paragraph:
-        "We start building your site for mobile devices first, then we add on to it to make tablet and desktop.",
+        "We kick off by designing your site specifically for mobile devices, then expand it to cater to tablets and desktops.",
     },
     {
       icon: "/whatWeDo/2.png",
       header: "Fully Responsive",
       paragraph:
-        "Your website will fit all mobile screens sizes, tablets, and desktop sizes so new clients can access your site from anywhere.",
+        "Your website will seamlessly adapt to all screen sizes, ensuring accessibility for new clients whether they're on mobile, tablet, or desktop devices, from anywhere around the globe.",
     },
     {
       icon: "/whatWeDo/3.png",
       header: "Optimization",
       paragraph:
-        "60% of all internet traffic is on mobile devices, so we optimize your mobile to perform their best in search engines.",
+        "With 60% of internet traffic originating from mobile devices, we prioritize optimizing your mobile presence to excel in search engine performance.",
     },
   ];
 
@@ -32,11 +32,12 @@ export default function WhatWeDo() {
         ---- <FaMobileAlt />
         ----
       </div>
-      <p className="text-sm iPhone5:text-lg  p-2 font-medium iPhone5Landscape:text-xl">
-        We specialize in small business web design and development for clients
-        anywhere in the US. Every line of code is written by hand to ensure the
-        best performance, which helps bring in more customers to your site and
-        bring more revenue to your business. LEARN MORE
+      <p className="text-sm iPhone5:text-lg  p-2 font-medium xl:px-52">
+        We're experts in crafting custom web designs and development solutions
+        for small businesses globally. Our hand-written code ensures top
+        performance, driving traffic and revenue. Whether you're in the US or
+        anywhere else, we're here to boost your online presence and business
+        success.
       </p>
 
       {servicesExplanation.map((item, i: number) => (
@@ -58,7 +59,7 @@ export default function WhatWeDo() {
           </h1>
           <p
             key={item.paragraph}
-            className=" text-sm iPhone5:text-lg px-1 iPhone5Landscape:text-xl"
+            className=" text-sm iPhone5:text-lg px-1 iPhone5Landscape:text-xl xl:px-52"
           >
             {item.paragraph}
           </p>

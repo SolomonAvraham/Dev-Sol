@@ -4,26 +4,14 @@ import { MdOutlineWork } from "react-icons/md";
 export default function Portfolio() {
   const portfolio = [
     {
-      name: "fsf sfgs",
-      location: "tel aviv",
-      paragraph:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat voluptatibus esse quisquam consequuntur doloribus neque enim non reprehenderit saepe at?",
-    },
-    {
-      name: "fsf sfgs",
-      location: "tel aviv",
-      paragraph:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat voluptatibus esse quisquam consequuntur doloribus neque enim non reprehenderit saepe at?",
-    },
-    {
-      name: "fsf sfgs",
+      name: "test test",
       location: "tel aviv",
       paragraph:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat voluptatibus esse quisquam consequuntur doloribus neque enim non reprehenderit saepe at?",
     },
   ];
   return (
-    <section className="min-h-screen text-center py-10 ">
+    <section id="#portfolio" className="min-h-screen text-center py-10 ">
       <h1 className="xs:text-xl font-bold iPhone5:text-3xl  iPhone5Landscape:text-5xl">
         <span className=" text-orange-400">OUR</span>PORTFOLIO
       </h1>

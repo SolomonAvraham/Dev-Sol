@@ -15,6 +15,15 @@ const config: Config = {
         lg: "1024px",
         xl: "1280px",
 
+        /// Tablet ////
+
+        ipad: "945px",
+        ipadPro: "834px",
+        ipadMini: "768px",
+        nexus7: "710px",
+
+        /// IPhones ////
+
         landScape8Plus: "736px",
         landScape8: "667px",
         landScape5: "567px",

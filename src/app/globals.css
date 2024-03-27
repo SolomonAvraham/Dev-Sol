@@ -21,7 +21,7 @@
   }
 }
 
-@media (min-width: 370px) {
+@media (min-width: 360px) {
   .custom-clip-path {
     clip-path: ellipse(300px 320px at 24% 15%);
   }
@@ -36,9 +36,15 @@
   }
 }
 
-@media (min-width: 414px) {
+@media (min-width: 390px) {
   .custom-clip-path {
-    clip-path: ellipse(370px 390px at 17% 18%);
+    clip-path: ellipse(300px 320px at 28% 15%);
+  }
+}
+
+@media (min-width: 412px) {
+  .custom-clip-path {
+    clip-path: ellipse(370px 390px at 18% 18%);
   }
   .custom-clip-path > h1 {
     font-size: 2.8rem;
@@ -52,17 +58,27 @@
   }
 }
 
+@media (min-width: 428px) {
+  .custom-clip-path {
+    clip-path: ellipse(300px 320px at 41% 23%);
+  }
+}
 
+@media (min-width: 430px) {
+  .custom-clip-path {
+    clip-path: ellipse(350px 350px at 36% 23%);
+  }
+}
 
 @media (min-width: 567px) {
   .custom-clip-path {
     clip-path: ellipse(500px 340px at 28% -8%);
   }
-    .custom-clip-path > h1 {
+  .custom-clip-path > h1 {
     font-size: 2.5rem;
     margin-top: 0px;
   }
-    .custom-clip-path > h2 {
+  .custom-clip-path > h2 {
     font-size: 1.4rem;
   }
 }
@@ -71,12 +87,22 @@
   .custom-clip-path {
     clip-path: ellipse(500px 400px at 28% -8%);
   }
-    .custom-clip-path > h1 {
+  .custom-clip-path > h1 {
     font-size: 3rem;
     margin-top: 0px;
   }
-    .custom-clip-path > h2 {
+  .custom-clip-path > h2 {
     font-size: 2rem;
+  }
+}
+
+@media (min-width: 710px) {
+  .custom-clip-path {
+    clip-path: ellipse(550px 490px at 38% 8%);
+  }
+  .custom-clip-path > h1 {
+    font-size: 4rem;
+    margin-top: 50px;
   }
 }
 
@@ -84,16 +110,61 @@
   .custom-clip-path {
     clip-path: ellipse(550px 490px at 38% -18%);
   }
-    .custom-clip-path > h1 {
+  .custom-clip-path > h1 {
     font-size: 4rem;
     margin-top: 10px;
   }
-    .custom-clip-path > h2 {
+  .custom-clip-path > h2 {
     font-size: 2.5rem;
   }
-      .custom-clip-path > p {
+  .custom-clip-path > p {
     font-size: 1.3rem;
     padding: 1px;
+  }
+}
+
+@media (min-width: 768px) {
+  .custom-clip-path {
+    clip-path: ellipse(750px 780px at 38% -18%);
+  }
+  .custom-clip-path > h1 {
+    font-size: 4rem;
+    margin-top: 50px;
+  }
+}
+
+@media (min-width: 945px) {
+  .custom-clip-path {
+    clip-path: ellipse(750px 600px at 58% 8%);
+  }
+  .custom-clip-path > h1 {
+    font-size: 5rem;
+    margin-top: 50px;
+  }
+  .custom-clip-path > p {
+    font-size: 1.7rem;
+    padding: 1px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .custom-clip-path {
+    clip-path: ellipse(1150px 600px at 18% 8%);
+  }
+  .custom-clip-path > h1 {
+    font-size: 4rem;
+    margin-top: 10px;
+  }
+  .custom-clip-path > h2 {
+    font-size: 2rem;
+  }
+  .custom-clip-path > p {
+    font-size: 1rem;
+    padding: 2px;
+  }
+
+  .custom-clip-path > * {
+    margin-left: 100px;
   }
 }
 
@@ -105,19 +176,25 @@
 
 @media (min-width: 320px) {
   .footer-clip-path {
-    clip-path: ellipse(280px 290px at 20% -70%);
+    clip-path: ellipse(280px 290px at 25% -70%);
   }
 }
 
-@media (min-width: 370px) {
+@media (min-width: 360px) {
   .footer-clip-path {
     clip-path: ellipse(290px 300px at 30% -60%);
   }
 }
 
+@media (min-width: 390px) {
+  .footer-clip-path {
+    clip-path: ellipse(290px 300px at 35% -60%);
+  }
+}
+
 @media (min-width: 414px) {
   .footer-clip-path {
-    clip-path: ellipse(300px 320px at 30% -60%);
+    clip-path: ellipse(300px 320px at 35% -60%);
   }
 }
 
@@ -136,5 +213,41 @@
 @media (min-width: 736px) {
   .footer-clip-path {
     clip-path: ellipse(410px 320px at 50% -70%);
+  }
+}
+
+@media (min-width: 768px) {
+  .footer-clip-path {
+    clip-path: ellipse(430px 320px at 50% -70%);
+  }
+}
+
+@media (min-width: 800px) {
+  .footer-clip-path {
+    clip-path: ellipse(530px 320px at 50% -70%);
+  }
+}
+
+@media (min-width: 820px) {
+  .footer-clip-path {
+    clip-path: ellipse(530px 320px at 50% -70%);
+  }
+}
+
+@media (min-width: 834px) {
+  .footer-clip-path {
+    clip-path: ellipse(530px 320px at 50% -70%);
+  }
+}
+
+@media (min-width: 945px) {
+  .footer-clip-path {
+    clip-path: ellipse(530px 320px at 50% -70%);
+  }
+}
+
+@media (min-width: 1280px) {
+  .footer-clip-path {
+    clip-path: ellipse(1020px 320px at 30% -70%);
   }
 }
