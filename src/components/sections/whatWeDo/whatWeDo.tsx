@@ -24,15 +24,15 @@ export default function WhatWeDo() {
   ];
 
   return (
-    <section className="min-h-screen text-center">
-      <h1 className="xs:text-2xl iPhone5:text-4xl font-bold iPhone5Landscape:text-6xl">
-        WHAT<span className=" text-orange-400">WE DO</span>
+    <section className=" text-center">
+      <h1 className="xs:text-2xl iPhone5:text-4xl font-bold ">
+        WHAT<span className=" text-orange-400">WE</span>DO
       </h1>
       <div className="mt-1 flex items-center justify-center xs:text-lg iPhone5:text-2xl text-[#edb200] iPhone5Landscape:text-4xl opacity-50">
         ---- <FaMobileAlt />
         ----
       </div>
-      <p className="text-sm iPhone5:text-lg  p-2 font-medium xl:px-52">
+      <p className="text-sm iPhone5:text-lg  p-2 font-semibold xl:px-52">
         We're experts in crafting custom web designs and development solutions
         for small businesses globally. Our hand-written code ensures top
         performance, driving traffic and revenue. Whether you're in the US or
@@ -40,31 +40,33 @@ export default function WhatWeDo() {
         success.
       </p>
 
-      {servicesExplanation.map((item, i: number) => (
-        <div
-          key={i}
-          className="flex flex-col items-center justify-center py-5 p-3 text-sm iPhone5Landscape:text-2xl"
-        >
-          <Image
-            src={item.icon}
-            alt={item.header}
-            width={100}
-            height={100}
-            key={item.icon}
-            className="iPhone5Landscape:w-52"
-          />
-
-          <h1 key={item.header} className="font-bold iPhone5:text-xl">
-            {item.header}
-          </h1>
-          <p
-            key={item.paragraph}
-            className=" text-sm iPhone5:text-lg px-1 iPhone5Landscape:text-xl xl:px-52"
+      <div className="xl:grid grid-cols-3 items-center justify-center xl:px-16">
+        {servicesExplanation.map((item, i: number) => (
+          <div
+            key={i}
+            className="flex flex-col items-center justify-center py-5 p-3 text-sm"
           >
-            {item.paragraph}
-          </p>
-        </div>
-      ))}
+            <Image
+              src={item.icon}
+              alt={item.header}
+              width={100}
+              height={100}
+              key={item.icon}
+              className=" "
+            />
+
+            <h1 key={item.header} className="font-bold iPhone5:text-xl">
+              {item.header}
+            </h1>
+            <p
+              key={item.paragraph}
+              className=" text-sm iPhone5:text-lg px-1 font-semibold"
+            >
+              {item.paragraph}
+            </p>
+          </div>
+        ))}
+      </div>
     </section>
   );
 }

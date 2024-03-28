@@ -23,13 +23,13 @@ export default function BusinessModel() {
     },
   ];
   return (
-    <section className="min-h-screen text-center flex flex-col items-center justify-center py-5 ">
+    <section className="text-center flex flex-col items-center justify-center py-10 ">
       <Image
         src={"/businessModel/1.png"}
         alt={"business model"}
-        width={170}
-        height={170}
-        className="xs:w-44 iPhone5Landscape:w-80"
+        width={500}
+        height={500}
+        className="xs:w-44 xl:w-[33rem]"
       />
       <h1 className="text-xl iPhone5:text-3xl font-bold mt-5 ">
         $100 Per Month, 12 Month Minimum Contract

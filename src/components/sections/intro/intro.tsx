@@ -26,7 +26,7 @@ export default function Intro() {
             py="2"
             color="bg-gray-100 text-black mt-3 font-semibold"
             className={
-              "hover:bg-orange-300 hover:text-white iPhone5:text-base iPhone8:text-lg  iPhone8Plus:text-xl landScape8:text-2xl xl:text-sm tracking-wide  "
+              "hover:bg-orange-300 hover:text-white iPhone5:text-base iPhone8:text-lg  iPhone8Plus:text-xl landScape8:text-2xl xl:text-sm tracking-wide xl2:text-xl"
             }
             children={"GET IN TOUCH!"}
           />
@@ -45,7 +45,8 @@ export default function Intro() {
     ipad:top-[50%] ipad:w-[37rem] ipad:left-[38%]
     ipadMini:top-[40%] ipadMini:w-[40rem] ipadMini:left-[30%]
     ipadPro:top-[36%]
-    xl:top-[30%] xl:left-[20%] xl:w-[28rem]"
+    xl:top-[30%] xl:left-[20%] xl:w-[28rem]
+    xl2:top-[28%] xl2:left-[29%] xl2:w-[36rem]"
       >
         <Image
           src={"/other/screens.png"}

@@ -12,10 +12,10 @@ export default function Footer() {
       path: "/about",
       name: "ABOUT",
     },
-    {
-      path: "/services",
-      name: "SERVICES",
-    },
+    // {
+    //   path: "/services",
+    //   name: "SERVICES",
+    // },
     {
       path: "/#portfolio",
       name: "PORTFOLIO",
@@ -84,37 +84,38 @@ export default function Footer() {
           </div>
         </div>
       </div>
-
+      {/* 
       <div className=" flex flex-col justify-center items-end text-white  xl:mr-10">
         <h5 className=" xl:text-2xl iPhone8:text-lg tracking-wide font-bold drop-shadow-2xl mr-2 iPhone5Landscape:text-2xl">
           SERVICES
         </h5>
         <hr className=" w-[60%] border-[#ffbe4d]  border-[1px] outline-[#000] outline-8 h-1 shadow-xl bg-white bg-opacity-25 " />
         <form action={redirectURL}>
-        {services.map((item, i: number) => (
-          <ul
-            key={i}
-            className="text-xs iPhone8:text-base text-right mr-1 iPhone5Landscape:text-lg"
-          >
-            <li
-              key={item.name}
-              className="xl:text-lg hover:drop-shadow-xl  mt-1 font-semibold tracking-wide hover:text-gray-700 cursor-pointer"
+          {services.map((item, i: number) => (
+            <ul
+              key={i}
+              className="text-xs iPhone8:text-base text-right mr-1 iPhone5Landscape:text-lg"
             >
-              {item.name}
-            </li>
-          </ul>
-        ))}</form>
-      </div>
+              <li
+                key={item.name}
+                className="xl:text-lg hover:drop-shadow-xl  mt-1 font-semibold tracking-wide hover:text-gray-700 cursor-pointer"
+              >
+                {item.name}
+              </li>
+            </ul>
+          ))}
+        </form>
+      </div> */}
 
       <div className="xs:text-sm  iPhone8:text-base  text-center text-white font-bold flex flex-col mt-10 mb-3">
         <Link
-          href={"mailto:OHWDinfo@gmail.com"}
+          href={"mailto:Devsoldev@gmail.com"}
           className="hover:text-gray-700 "
         >
-          OHWDinfo@gmail.com
+          Devsoldev@gmail.com
         </Link>
-        <Link href={"tel:+(219)576-2539"} className="hover:text-gray-700 ">
-          (219) 576-2539{" "}
+        <Link href={"tel:+972 (54) 972-7138"} className="hover:text-gray-700 ">
+          +972 (54) 972-7138
         </Link>
       </div>
 

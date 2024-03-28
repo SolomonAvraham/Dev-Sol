@@ -28,7 +28,7 @@ export default function NavBar() {
     { name: "HOME", path: "/" },
     { name: "ABOUT", path: "/about" },
     { name: "PORTFOLIO", path: "/#portfolio" },
-    { name: "SERVICES", path: "/services" },
+    // { name: "SERVICES", path: "/services" },
     { name: "CONTACT", path: "/contact" },
   ];
 
@@ -110,8 +110,7 @@ export default function NavBar() {
               key={i}
               className={`${
                 urlActive === item.path &&
-                urlActive !== "/" &&
-                " xl:text-black border-b-[1.5px] border-black font-extrabold xl:text-xl xl:border-spacing-y-52"
+                " xl:text-black border-b-[1.5px] border-black font-extrabold xl:text-xl pb-1 "
               } cursor-pointer text-white hover:text-black xl:text-lg`}
               onClick={() => router.push(item.path)}
             >

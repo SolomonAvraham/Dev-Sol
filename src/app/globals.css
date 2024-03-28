@@ -149,7 +149,7 @@
 
 @media (min-width: 1280px) {
   .custom-clip-path {
-    clip-path: ellipse(1150px 600px at 18% 8%);
+    clip-path: ellipse(1250px 600px at 18% 8%);
   }
   .custom-clip-path > h1 {
     font-size: 4rem;
@@ -167,6 +167,24 @@
     margin-left: 100px;
   }
 }
+
+@media (min-width: 1440px) {
+  .custom-clip-path {
+    clip-path: ellipse(1650px 600px at 18% 8%);
+  }
+  .custom-clip-path > h1 {
+    font-size: 6rem;
+    margin-top: 10px;
+  }
+  .custom-clip-path > h2 {
+    font-size: 2.6rem;
+  }
+  .custom-clip-path > p {
+    font-size: 1.2rem;
+   }
+
+}
+
 
 /*  --------------   */
 
@@ -248,6 +266,12 @@
 
 @media (min-width: 1280px) {
   .footer-clip-path {
-    clip-path: ellipse(1020px 320px at 30% -70%);
+    clip-path: ellipse(1160px 320px at 30% -70%);
+  }
+}
+
+@media (min-width: 1440px) {
+  .footer-clip-path {
+    clip-path: ellipse(1460px 350px at 30% -70%);
   }
 }
