@@ -19,7 +19,7 @@ export default function Intro() {
           No WordPress or page builders - We offer 100% hand-coded websites with
           superior results starting at $100/mo.
         </p>
-        <form action={redirectURL} className="xl:ml-32">
+        <form action={redirectURL} className="xl:ml-32 cursor-pointer">
           <Button
             type={"submit"}
             px="2"
@@ -49,6 +49,7 @@ export default function Intro() {
     xl2:top-[28%] xl2:left-[29%] xl2:w-[36rem]"
       >
         <Image
+          priority={true}
           src={"/other/screens.png"}
           alt="logo"
           width={500}

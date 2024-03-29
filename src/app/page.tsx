@@ -8,10 +8,12 @@ import WhoWeAre from "@/components/sections/whoWeAre/whoWeAre";
 export default function Home() {
   return (
     <>
-      <Intro/>
+      <Intro />
       <WhatWeDo />
       <BusinessModel />
-      <Portfolio />
+      <span id="#portfolio">
+        <Portfolio />
+      </span>
       <WhoWeAre />
       <Costs />
     </>

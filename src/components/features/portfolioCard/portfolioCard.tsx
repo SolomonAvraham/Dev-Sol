@@ -9,31 +9,27 @@ type Props = {
 export default function PortfolioCard(props: Props) {
   const { name, location, paragraph } = props;
   return (
-    <div className="border-b-[5px] mt-7 border-t-[5px] min-h-full xs:w-[12rem] iPhone5:w-[15rem]  iPhone5Landscape:w-[22rem] rounded shadow-lg mx-auto border-slate-200 border-[0.10px] flex flex-col items-center justify-center py-4 px-2">
+    <div className="hover:scale-105 hover:shadow-2xl  border-b-[5px] border-t-[15px] min-h-full xs:w-[12rem] iPhone5:w-[17rem] rounded shadow-lg mx-auto border-slate-200 border-[0.10px] flex flex-col items-center justify-center py-4 px-2">
       <Image
+        priority={true}
         src={"/portfolio/1.png"}
         alt={"portfolio"}
-        width={250}
-        height={250}
-        className=" drop-shadow-xl iPhone5Landscape:w-[22rem]"
+        width={500}
+        height={500}
+        className=" drop-shadow-xl mt-3 "
       />
-      <h1 className="xs:text-xl font-bold mt-4 iPhone5Landscape:text-5xl tracking-widest">
-        {name}
-      </h1>
-      <hr className="h-[1px] mt-2 w-3/4 bg-gray-100 " />
-      <h2 className="xs:text-base tracking-wide font-semibold text-gray-500 iPhone5Landscape:text-2xl">
+      <h1 className="xs:text-xl font-bold mt-4 tracking-widest">{name}</h1>
+      <hr className="h-[1px] w-3/4 bg-gray-50 " />
+      <h2 className=" text-sm tracking-widest font-semibold text-gray-400 ">
         {location}
       </h2>
-      <p className="xs:text-xs p-3 iPhone5Landscape:text-xl">{paragraph}</p>
+      <p className="xs:text-sm font-semibold p-3">{paragraph}</p>
       <Button
         type={"submit"}
-        fontSize="xs"
         px="2"
         py="2"
         color="bg-gray-100 text-black mt-3 font-bold"
-        className={
-          "mt-4 mb-6 hover:bg-gray-200 iPhone5:text-sm iPhone5Landscape:text-4xl iPhone5Landscape:font-normal xs:text-lg"
-        }
+        className={"mt-4 mb-6 hover:bg-gray-200 xs:text-lg"}
         children={` Visit ${name}`}
       />
     </div>

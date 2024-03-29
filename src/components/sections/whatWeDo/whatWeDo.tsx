@@ -40,13 +40,14 @@ export default function WhatWeDo() {
         success.
       </p>
 
-      <div className="xl:grid grid-cols-3 items-center justify-center xl:px-16">
+      <div className="xl:grid grid-cols-3 items-center justify-center xl:px-16 py-10">
         {servicesExplanation.map((item, i: number) => (
           <div
             key={i}
             className="flex flex-col items-center justify-center py-5 p-3 text-sm"
           >
             <Image
+              priority={true}
               src={item.icon}
               alt={item.header}
               width={100}

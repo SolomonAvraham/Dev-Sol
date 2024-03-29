@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { redirect } from "next/navigation";
+import Logo from "../logo/logo";
 
 export default function Footer() {
   const navigation = [
@@ -46,8 +47,7 @@ export default function Footer() {
     <footer className=" bg-gradient-to-b from-[#f6b94f] to-[#eea236] w-full min-h-[33rem] relative z-0 ">
       <div className="h-52 z-50 footer-clip-path bg-white" />
       <div className="flex flex-col p-1">
-        <Image src={"/logo/logo.png"} alt="logo" width={400} height={400} />
-
+<Logo />
         <div className=" flex flex-col justify-center items-start text-white xl:ml-10">
           <h5 className=" tracking-wide font-bold drop-shadow-2xl iPhone8:text-lg xl:text-2xl">
             NAVIGATION
@@ -74,6 +74,7 @@ export default function Footer() {
             </div>
             <div className="iPhone5Landscape:ml-56 ml-32 opacity-80 xl:ml-52">
               <Image
+                priority={true}
                 src={"/logo/2.png"}
                 alt="logo"
                 width={100}

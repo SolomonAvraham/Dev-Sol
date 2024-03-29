@@ -1,4 +1,15 @@
+import MyPic from "@/components/features/myPic/myPic";
 import Image from "next/image";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Dev-Sol About US",
+  description: `Giving Small Businesses The Big Business Treatment Hello there! I'm Solomon Avraham, the proud owner and sole developer of DEV-SOL.
+Two years ago, I embarked on a journey into programming after mastering coding skills. Finding employment was challenging due to the unstable job market. That's when I decided to take matters into my own hands and establish DEV-SOL.
+My focus is on assisting small businesses in promoting their ventures, whether locally or globally. I started by crafting websites meticulously by hand and reaching out to small businesses to offer my assistance. What I discovered was a common challenge: many small businesses struggled to afford high-quality websites. Those who did invest often found themselves with subpar results, trapped in outdated design trends.
+Recognizing this frustration, I pivoted my business model to better serve their needs. Thus, I introduced the $100 a month model. This approach offers affordability and flexibility, ensuring that small businesses can have a professional online presence without straining their finances.
+At DEV-SOL, I'm committed to delivering top-notch websites that reflect the essence and aspirations of each business. My goal is to empower small businesses with the tools they need to thrive in today's competitive landscape. Let's work together to elevate your business's online presence and unlock its full potential.`,
+};
 
 export default function About() {
   return (
@@ -11,7 +22,7 @@ export default function About() {
         <div className="text-7xl tracking-[2rem] opacity-5 mb-10 font-bold ">
           ABOUT
         </div>
-        <h1 className=" absolute top-1/4 text-4xl nexus7:text-5xl tracking-[0.7rem] opacity-60 font-bold ">
+        <h1 className=" absolute top-1/4 text-4xl nexus7:text-6xl  tracking-[0.3rem] opacity-60 font-bold ">
           ABOUT US
         </h1>
         <div className="text-9xl  tracking-[2rem] opacity-5 mb-1 font-bold ">
@@ -23,6 +34,7 @@ export default function About() {
       </div>
 
       <Image
+        priority={true}
         src={"/page/about.jpeg"}
         alt="s"
         width={500}
@@ -30,21 +42,19 @@ export default function About() {
         className=" mx-auto nexus7:w-full xl:w-[16rem]  rounded-b-3xl shadow-md "
       />
 
-      <div className="flex flex-col gap-5 items-center py-16 mt-10 text-center">
-        <div className="bg-black h-36 w-28 rounded-full mx-auto mt-5 xl:h-44 xl:w-44">
-          <div className="bg-white h-[5.6rem] w-[5.6rem] rounded-full mx-auto mt-5 xl:h-64 xl:w-44"></div>
-        </div>
+      <div className="flex flex-col gap-5 items-center  py-16 mt-10 text-center">
+        <MyPic />
 
-        <h4 className="font-bold text-3xl nexus7:text-5xl xl:text-2xl">
+        <h4 className="font-bold text-3xl nexus7:text-5xl  ">
           Solomon<span className="text-orange-400">Avraham</span>.
         </h4>
 
         <div className=" font-extrabold mb-10 ">
-          <h5 className="text-2xl nexus7:text-4xl xl:text-xl">
-            <span className="text-orange-400">DEV</span>-SOL
+          <h5 className="text-2xl nexus7:text-4xl xl:text-3xl  tracking-wide">
+            <span className="text-orange-400">DEV</span>SOL
           </h5>
           <h6 className="text-sm nexus7:text-2xl xl:text-sm">
-            WEB DESIGNS & <span className="text-orange-400">DEVELOPMENT</span>
+            WEB DESIGNS <span className="text-orange-400">& DEVELOPMENT</span>
           </h6>
           <p className="p-3 xl:px-52 text-lg nexus7:text-2xl nexus7:p-10 font-semibold text-center xl:text-lg">
             Giving Small Businesses The Big Business Treatment Hello there! I'm
