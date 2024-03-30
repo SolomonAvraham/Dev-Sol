@@ -46,7 +46,7 @@ export default function BusinessModel() {
           You own your domain, content, listing, and profiles. Cancel anytime
           with no fees or hassle.
         </p>
-        <div className="xl:flex">
+        <div className="xl:flex p-2">
           {" "}
           <Image
           priority={true}

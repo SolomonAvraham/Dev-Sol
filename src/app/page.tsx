@@ -11,9 +11,7 @@ export default function Home() {
       <Intro />
       <WhatWeDo />
       <BusinessModel />
-      <span id="#portfolio">
-        <Portfolio />
-      </span>
+      <Portfolio />
       <WhoWeAre />
       <Costs />
     </>

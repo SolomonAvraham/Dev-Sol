@@ -13,10 +13,10 @@ export default function WhoWeAre() {
         ----
       </div>
       <MyPic />
-      <h4 className="font-bold xs:text-xl nexus7:mt-8">
+      <h4 className="font-bold xs:text-xl nexus7:mt-8 xl:text-4xl">
         Solomon<span className="text-orange-400">Avraham</span>.
       </h4>
-      <h5 className="xs:text-sm text-gray-500 ">
+      <h5 className="xs:text-sm text-gray-500 xl:text-xl">
         <span className="text-orange-400">OWNER</span>/DEVELOPER
       </h5>{" "}
       <p className=" font-semibold xs:text-lg p-3 xl:px-52">

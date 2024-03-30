@@ -35,11 +35,12 @@ export default function NavBar() {
 
   const menu = (
     <div
-      className={`fixed top-1 iPhone5:top-[5%] landScape5:top-[11%] z-20 w-full min-h-screen bg-gradient-to-t from-[#f6b94f] via-[#eea236] to-[#edb200] text-center transition-opacity duration-500 ease-in-out ${
-        isOpen
-          ? "opacity-100 translate-y-0"
-          : "opacity-0 -translate-y-full pointer-events-none"
-      }`}
+      className={`fixed top-1 iPhone5:top-[5%] landScape5:top-[11%] z-20 w-full min-h-screen bg-gradient-to-t from-[#f6b94f] via-[#eea236] to-[#edb200] text-center`}
+      style={{
+        opacity: isOpen ? 1 : 0,
+        transition: "opacity 0.5s ease-in-out",
+        pointerEvents: isOpen ? "auto" : "none",
+      }}
     >
       <div
         className="overflow-y-auto flex flex-col 

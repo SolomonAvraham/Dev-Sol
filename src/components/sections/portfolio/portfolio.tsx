@@ -23,7 +23,7 @@ export default function Portfolio() {
     },
   ];
   return (
-    <section className="min-h-screen text-center py-10 ">
+    <section id="#portfolio" className="min-h-screen text-center py-10 ">
       <h1 className="xs:text-xl font-bold iPhone5:text-4xl">
         <span className=" text-orange-400">OUR</span>PORTFOLIO
       </h1>

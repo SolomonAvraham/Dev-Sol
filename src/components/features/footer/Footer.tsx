@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import Logo from "../logo/logo";
+import { adminEmail, adminPhoneNumber } from "@/utils/shortCut";
 
 export default function Footer() {
   const navigation = [
@@ -47,7 +48,7 @@ export default function Footer() {
     <footer className=" bg-gradient-to-b from-[#f6b94f] to-[#eea236] w-full min-h-[33rem] relative z-0 ">
       <div className="h-52 z-50 footer-clip-path bg-white" />
       <div className="flex flex-col p-1">
-<Logo />
+        <Logo />
         <div className=" flex flex-col justify-center items-start text-white xl:ml-10">
           <h5 className=" tracking-wide font-bold drop-shadow-2xl iPhone8:text-lg xl:text-2xl">
             NAVIGATION
@@ -109,14 +110,14 @@ export default function Footer() {
       </div> */}
 
       <div className="xs:text-sm  iPhone8:text-base  text-center text-white font-bold flex flex-col mt-10 mb-3">
+        <Link href={`mailto:${adminEmail}`} className="hover:text-gray-700 ">
+          {adminEmail}
+        </Link>
         <Link
-          href={"mailto:Devsoldev@gmail.com"}
+          href={`tel:${  adminPhoneNumber  }`}
           className="hover:text-gray-700 "
         >
-          Devsoldev@gmail.com
-        </Link>
-        <Link href={"tel:+972 (54) 972-7138"} className="hover:text-gray-700 ">
-          +972 (54) 972-7138
+          {adminPhoneNumber}
         </Link>
       </div>
 
