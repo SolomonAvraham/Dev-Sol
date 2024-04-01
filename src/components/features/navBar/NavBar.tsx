@@ -3,8 +3,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { IoMdMenu } from "react-icons/io";
-import ReactDOM from "react-dom";
-import { useRouter, usePathname } from "next/navigation";
+ import { useRouter, usePathname } from "next/navigation";
 import Logo from "../logo/logo";
 
 export default function NavBar() {
@@ -33,61 +32,6 @@ export default function NavBar() {
     { name: "CONTACT", path: "/contact" },
   ];
 
-  const menu = (
-    <div
-      className={`fixed top-1 iPhone5:top-[5%] landScape5:top-[11%] z-20 w-full min-h-screen bg-gradient-to-t from-[#f6b94f] via-[#eea236] to-[#edb200] text-center`}
-      style={{
-        opacity: isOpen ? 1 : 0,
-        transition: "opacity 0.5s ease-in-out",
-        pointerEvents: isOpen ? "auto" : "none",
-      }}
-    >
-      <div
-        className="overflow-y-auto flex flex-col 
-       p-1 items-center justify-center text-xl mt-5  gap-2 
-       iPhone5:gap-1 iPhone5:text-4xl  
-       iPhone8:text-5xl
-       iPhone8Plus:gap-2
-       landScape5:text-xl
-       landScape8:text-3xl
-       landScape8Plus:text-4xl"
-      >
-        {pages.map((item, i: number) => (
-          <ul
-            key={item.name}
-            className={` ${
-              urlActive === item.path && " font-extrabold  bg-black  "
-            } tracking-widest font-bold  mt-5 landScape5:mt-0 ${
-              i % 2 === 0
-                ? "bg-[#eea236] w-full py-1 text-white hover:text-black hover:bg-[#f6b94f]"
-                : "bg-[#f6b94f] w-full py-1 text-white hover:text-black hover:bg-[#eea236]"
-            }`}
-          >
-            <li
-              key={item.path}
-              className=" cursor-pointer"
-              onClick={() => {
-                item.path === "#portfolio"
-                  ? scrollToSection(item.path)
-                  : router.push(item.path);
-                setIsOpen(false);
-              }}
-            >
-              {item.name}
-            </li>
-          </ul>
-        ))}
-        <Image
-          src={"/logo/2.png"}
-          alt="logo"
-          width={100}
-          height={100}
-          className=" mt-10 landScape5:mt-0 landScape5:w-[2.5rem]"
-        />
-      </div>
-    </div>
-  );
-
   const scrollToSection = (path: string) => {
     const element = document.getElementById(path);
     router.push("/");
@@ -97,7 +41,7 @@ export default function NavBar() {
   return (
     <nav
       className={`bg-gradient-to-t from-[#edb200] to-[#eea236] w-full ${
-        isOpen && " fixed top-0 z-50"
+        isOpen && " fixed top-0 z-50 transition-all duration-300"
       }`}
     >
       <div
@@ -113,8 +57,53 @@ export default function NavBar() {
         >
           {isOpen ? "X" : <IoMdMenu />}
         </button>{" "}
-        {isOpen &&
-          ReactDOM.createPortal(menu, document.getElementById("portal-root")!)}
+        <div
+          style={{
+            opacity: isOpen ? 1 : 0,
+            transition: "opacity 500ms ease-in",
+          }}
+          className={`fixed w-full left-0 top-1 iPhone5:top-[10%] iPhone8:top-[8%]
+        landScape5:top-[19%] z-20 h-full bg-gradient-to-t from-[#f6b94f] via-[#eea236] to-[#edb200] text-center`}
+        >
+          <div
+            className={` mt-24git add .
+git commit -m "update"
+git push flex flex-col gap-12 items-center justify-center
+   p-1  text-xl   
+     iPhone5:text-4xl  
+   iPhone8:text-5xl
+    landScape5:text-xl
+   landScape8:text-3xl
+   landScape8Plus:text-4xl`}
+          >
+            {pages.map((item, i: number) => (
+              <ul
+                key={item.name}
+                className={` ${
+                  urlActive === item.path && " font-extrabold bg-[#44372468]"
+                } tracking-widest font-bold  ${
+                  i % 2 === 0
+                    ? "bg-[#eea236] w-full py-1 text-white hover:text-black hover:bg-[#f6b94f]"
+                    : "bg-[#f6b94f] w-full py-1 text-white hover:text-black hover:bg-[#eea236]"
+                }`}
+              >
+                <li
+                  key={item.path}
+                  className=" cursor-pointer"
+                  onClick={() => {
+                    item.path === "#portfolio"
+                      ? scrollToSection(item.path)
+                      : router.push(item.path);
+                    setIsOpen(false);
+                  }}
+                >
+                  {item.name}
+                </li>
+              </ul>
+            ))}
+        
+          </div>
+        </div>
       </div>
 
       <div className=" justify-around items-center px-12  py-1 hidden nexus7:flex xl:px-0 ">
@@ -123,13 +112,13 @@ export default function NavBar() {
         </div>
 
         {pages.map((item, i: number) => (
-          <ul key={item.name} className="  text-sm font-semibold">
+          <ul key={item.name} className="  text-sm font-semibold flex ">
             <li
               key={i}
               className={`${
                 urlActive === item.path &&
                 " xl:text-black border-b-[1.5px] border-black font-extrabold xl:text-xl pb-1 "
-              } cursor-pointer text-white hover:text-black xl:text-lg`}
+              } cursor-pointer text-white hover:text-black`}
               onClick={() =>
                 item.path === "#portfolio"
                   ? scrollToSection(item.path)

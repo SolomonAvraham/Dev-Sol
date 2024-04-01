@@ -21,7 +21,7 @@ export async function POST(req: NextRequest) {
       from: `${businessName}<${email}>`,
       to: "devsolwebdev@gmail.com",
       subject: "New message from your website",
-      html: `<h3>Message from: ${fullName}.</h3><h5>Business Name: ${businessName}.<br/>Phone Number: ${phoneNumber}.</h5><p>${message}</p>`,
+      html: `<h3>Message from: ${fullName}.</h3><h5>Business Name: ${businessName}.<br/>Phone Number: ${phoneNumber}.<br/>Email: ${email}.</h5><p>${message}</p>`,
       replyTo: email,
       date: new Date().toDateString(),
     };

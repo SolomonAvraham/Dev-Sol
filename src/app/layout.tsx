@@ -97,7 +97,7 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/logo/logo.png" type="image/png" sizes="50*50" />
       </head>
-      <body id="portal-root">
+      <body>
         <header>
           <NavBar />
         </header>

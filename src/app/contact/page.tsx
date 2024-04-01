@@ -42,7 +42,9 @@ export default function Contact() {
     }, 2100);
   }, [showMessage]);
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
@@ -83,8 +85,8 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen bg-icons bg-left-bottom bg-opacity-10">
-      <div className=" relative h-24   flex items-center justify-center  bg-gradient-to-t from-[#f6b94f] via-[#eea136c0] to-[#edb200]">
+    <div className="min-h-screen">
+      <div className=" relative h-24  landScape8:top-[10%]   flex items-center justify-center  bg-gradient-to-t from-[#f6b94f] via-[#eea136c0] to-[#edb200]">
         <div className="text-7xl opacity-5 mb-10 font-bold ">CONTACT</div>
         <div className="text-5xl tracking-[2rem] opacity-5 font-bold">
           CONTACT
@@ -126,6 +128,7 @@ export default function Contact() {
         ))}
       </div>
 
+      <div className=" bg-icons bg-left-bottom bg-opacity-10">
       <div className=" nexus7:flex gap-24 justify-center items-center">
         <div className="xs:text-sm  gap-3 iPhone8:text-base   text-center  font-bold flex flex-col py-10">
           <div className="flex flex-col  nexus7:text-lg w-1/2 items-start mx-auto justify-center border-orange-300 text-gray-500  border-l-2 pl-2 text-sm">
@@ -235,7 +238,7 @@ export default function Contact() {
                     value={formData.message}
                     onChange={handleChange}
                     className="w-full px-3 py-2 border rounded-md"
-                    rows="5"
+                    rows={5}
                     required
                     placeholder="Message"
                   ></textarea>
@@ -258,6 +261,7 @@ export default function Contact() {
               <span className=" text-white drop-shadow-md">TALK</span>.
             </div>
           </form>
+        </div>
         </div>
       </div>
     </div>
