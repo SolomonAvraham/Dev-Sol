@@ -11,7 +11,9 @@ export default function Intro() {
   return (
     <section className="relative landScape5:mb-44  nexus7:mb-0">
       <div className="text-white bg-gradient-to-t from-[#f6b94f] via-[#eea236] to-[#edb200] min-h-screen custom-clip-path flex flex-col xl:items-center   px-2">
-        <h1 className="mt-5 xl:tracking-wide font-extrabold">Small Business</h1>
+        <h1 className="font-Satisfy mt-5 xl:tracking-wide font-extrabold">
+          Small Business
+        </h1>
         <h2 className=" font-extrabold xl:tracking-wide">
           Web Design + Development
         </h2>
@@ -26,7 +28,7 @@ export default function Intro() {
             py="2"
             color="bg-gray-100 text-black mt-3 font-semibold"
             className={
-              "hover:bg-orange-300 hover:text-white iPhone5:text-base iPhone8:text-lg  iPhone8Plus:text-xl landScape8:text-2xl xl:text-sm tracking-wide xl2:text-xl"
+              "hover:bg-orange-300 hover:text-white iPhone5:text-base iPhone8:text-lg  iPhone8Plus:text-xl landScape8:text-2xl xl:text-lg tracking-wide xl2:text-xl"
             }
             children={"GET IN TOUCH!"}
           />
@@ -39,7 +41,7 @@ export default function Intro() {
     iPhone8Plus:top-[47%] iPhone8Plus:w-[20rem] iPhone8Plus:left-16
     landScape5:top-[68%] landScape5:w-[18rem] landScape5:left-[40%]
    landScape8:top-[68%] landScape8:w-[21rem] landScape8:left-[44%]
-    landScape8Plus:top-[70%] landScape8Plus:w-[23rem] landScape8Plus:left-[34%]
+    landScape8Plus:top-[70%] landScape8Plus:w-[ 1rem] landScape8Plus:left-[34%]
     
     nexus7:top-[40%] nexus7:w-[27rem] nexus7:left-[32%]
     ipad:top-[50%] ipad:w-[37rem] ipad:left-[38%]

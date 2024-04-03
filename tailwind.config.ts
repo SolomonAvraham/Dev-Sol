@@ -10,6 +10,7 @@ const config: Config = {
     extend: {
       backgroundImage: {
         icons: "url('/logo/logo.png')",
+        screens: "url('/other/screens.png')",
       },
       screens: {
         xs: "0px",
@@ -36,6 +37,10 @@ const config: Config = {
         iPhone8: "375px",
         iPhone5: "320px",
         Nokia8110: "240px",
+      },
+      fontFamily: {
+        Satisfy: ["Satisfy", "cursive"],
+        Neucha: ["Neucha", "cursive"],
       },
     },
   },

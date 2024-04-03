@@ -4,26 +4,17 @@ import { MdOutlineWork } from "react-icons/md";
 export default function Portfolio() {
   const portfolio = [
     {
-      name: "test test",
-      location: "tel aviv",
+      pic: "/portfolio/client-pic.png",
+      name: "BarbeRas",
+      location: "Tel-Aviv",
       paragraph:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat voluptatibus esse quisquam consequuntur doloribus neque enim non reprehenderit saepe at?",
-    },
-    {
-      name: "test test",
-      location: "tel aviv",
-      paragraph:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat voluptatibus esse quisquam consequuntur doloribus neque enim non reprehenderit saepe at?",
-    },
-    {
-      name: "test test",
-      location: "tel aviv",
-      paragraph:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat voluptatibus esse quisquam consequuntur doloribus neque enim non reprehenderit saepe at?",
+        "Barberas, a centrally-located barber shop in Tel-Aviv, offers easy appointment scheduling. Our robust management system enhances efficiency for both the business owner and customers, eliminating unnecessary small talk.",
+      url: "https://www.barberas.co.il",
     },
   ];
+
   return (
-    <section id="#portfolio" className="min-h-screen text-center py-10 ">
+    <section className="min-h-screen text-center py-10 ">
       <h1 className="xs:text-xl font-bold iPhone5:text-4xl">
         <span className=" text-orange-400">OUR</span>PORTFOLIO
       </h1>
@@ -35,9 +26,11 @@ export default function Portfolio() {
         {portfolio.map((item, i: number) => (
           <PortfolioCard
             key={i}
+            pic={item.pic}
             name={item.name}
             location={item.location}
             paragraph={item.paragraph}
+            url={item.url}
           />
         ))}
       </div>

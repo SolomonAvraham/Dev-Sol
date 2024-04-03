@@ -95,13 +95,20 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/logo/logo.png" type="image/png" sizes="50*50" />
+        <link
+          rel="icon"
+          href="/logo/small-logo.png"
+          type="image/png"
+          sizes="500*500"
+        />
       </head>
       <body>
         <header>
           <NavBar />
         </header>
-        <main className="min-h-screen overflow-hidden">{children}</main>
+        <main className="min-h-screen overflow-hidden landScape8:mt-0 ">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

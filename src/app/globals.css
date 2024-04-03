@@ -1,6 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Neucha&family=Satisfy&display=swap");
 
 .custom-clip-path {
   clip-path: ellipse(280px 300px at 0% 0%);
@@ -152,11 +154,13 @@
     clip-path: ellipse(1250px 600px at 18% 8%);
   }
   .custom-clip-path > h1 {
-    font-size: 4rem;
+    font-size: 7rem;
     margin-top: 10px;
+    margin-bottom: 0; /* Add this line */
   }
   .custom-clip-path > h2 {
-    font-size: 2rem;
+    font-size: 3rem;
+    margin-top: 0; /* Or add this line */
   }
   .custom-clip-path > p {
     font-size: 1rem;
@@ -273,6 +277,3 @@
     clip-path: ellipse(1460px 350px at 30% -70%);
   }
 }
-
-
- 
