@@ -87,20 +87,22 @@ export default function Contact() {
   return (
     <div className="min-h-screen">
       <div className=" relative h-24  landScape8:top-[10%]   flex items-center justify-center  bg-gradient-to-t from-[#f6b94f] via-[#eea136c0] to-[#edb200]">
-        <div className="text-7xl opacity-5 mb-10 font-bold ">CONTACT</div>
-        <div className="text-5xl tracking-[2rem] opacity-5 font-bold">
-          CONTACT
-        </div>{" "}
-        <div className="text-7xl tracking-[2rem] opacity-5 mb-10 font-bold ">
+        <div className="text-7xl opacity-5 mb-10 font-bold font-bebas">
           CONTACT
         </div>
-        <h1 className=" absolute top-1/4 text-4xl nexus7:text-6xl  tracking-[0.3rem] opacity-60 font-bold ">
-          CONTACT US
-        </h1>
-        <div className="text-9xl tracking-[2rem] opacity-5 mb-1 font-bold ">
+        <div className="text-5xl tracking-[2rem] opacity-5 font-bold font-bebas">
           CONTACT
         </div>{" "}
-        <div className="text-6xl  tracking-[2rem] opacity-5 mb-1 font-bold ">
+        <div className="text-7xl tracking-[2rem] opacity-5 mb-10 font-bold font-bebas">
+          CONTACT
+        </div>
+        <h1 className="font-bebas absolute top-[5%] text-4xl nexus7:text-8xl  tracking-[0.7rem] opacity-60 font-bold ">
+          CONTACT US
+        </h1>
+        <div className="text-9xl tracking-[2rem] opacity-5 mt-2 font-bold font-bebas">
+          CONTACT
+        </div>{" "}
+        <div className="text-6xl  tracking-[2rem] opacity-5 mb-1 font-bold font-bebas">
           CONTACT
         </div>
       </div>
@@ -132,19 +134,19 @@ export default function Contact() {
         <div className=" nexus7:flex gap-24 justify-center items-center">
           <div className="xs:text-sm  gap-3 iPhone8:text-base   text-center  font-bold flex flex-col py-10">
             <div className="flex flex-col  nexus7:text-lg w-1/2 items-start mx-auto justify-center border-orange-300 text-gray-500  border-l-2 pl-2 text-sm">
-              <span className=" cursor-default">Email:</span>
+              <span className=" cursor-default font-fjalla">Email:</span>
               <Link
                 href={`mailto:${adminEmail}`}
-                className="hover:text-gray-700 "
+                className="hover:text-gray-700  font-reddit"
               >
                 {adminEmail}
               </Link>
             </div>
             <div className="flex flex-col  items-start mx-auto justify-center border-orange-300 text-gray-500  border-l-2 pl-2 text-sm">
-              <span className=" cursor-default">Phone:</span>
+              <span className=" font-fjalla cursor-default">Phone:</span>
               <Link
                 href={`tel:${adminPhoneNumber}`}
-                className="hover:text-gray-700"
+                className="hover:text-gray-700 font-reddit"
               >
                 {adminPhoneNumber}
               </Link>
@@ -180,13 +182,20 @@ export default function Contact() {
                 <>
                   {[
                     { label: "Full Name", name: "fullName", type: "text" },
-                    { label: "Business Name", name: "businessName", type: "text" },
+                    {
+                      label: "Business Name",
+                      name: "businessName",
+                      type: "text",
+                    },
                     { label: "Email Address", name: "email", type: "email" },
                     { label: "Phone Number", name: "phoneNumber", type: "tel" },
                     { label: "Message", name: "message", type: "textarea" },
                   ].map((field, index) => (
                     <div className="mb-4" key={index}>
-                      <label htmlFor={field.name} className="block mb-1"></label>
+                      <label
+                        htmlFor={field.name}
+                        className="block mb-1"
+                      ></label>
                       {field.type === "textarea" ? (
                         <textarea
                           id={field.name}

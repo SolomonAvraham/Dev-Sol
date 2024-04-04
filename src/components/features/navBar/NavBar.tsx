@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { IoMdMenu } from "react-icons/io";
 import { useRouter, usePathname } from "next/navigation";
 import Logo from "../logo/logo";
-import Link from "next/link";
 
 export default function NavBar() {
   const router = useRouter();
@@ -35,9 +34,7 @@ export default function NavBar() {
 
   useEffect(() => {
     if (routeToPortfolio) {
-      console.log("wwww");
       router.push("/");
-      // <Link href="/#portfolio" />;
       setRouteToPortfolio(false);
       const element = document.getElementById("#portfolio");
       return element?.scrollIntoView({ behavior: "smooth" });
@@ -140,8 +137,8 @@ export default function NavBar() {
               key={i}
               className={`${
                 urlActive === item.path &&
-                " xl:text-black border-b-[1.5px] border-black font-extrabold xl:text-xl pb-1 "
-              } cursor-pointer text-white hover:text-black`}
+                " xl:text-black border-b-[1.5px] border-black font-extrabold xl:text-xl pb-1 nexus7:font-fjalla "
+              } cursor-pointer text-white hover:text-black font-ojuju `}
               onClick={() => scrollToSection(item.path)}
             >
               {item.name}

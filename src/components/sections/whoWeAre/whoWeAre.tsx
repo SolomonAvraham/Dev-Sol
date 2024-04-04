@@ -5,7 +5,7 @@ export default function WhoWeAre() {
   return (
     <section className="min-h-screen text-center py-10 flex flex-col items-center justify-center gap-2">
       {" "}
-      <h1 className="xs:text-xl font-bold iPhone5:text-4xl">
+      <h1 className="xs:text-xl  iPhone5:text-4xl font-fjalla tracking-wider">
         WHO<span className=" text-orange-400">WE</span>ARE
       </h1>
       <div className="mt-1 mb-10 iPhone5:text-2xl flex items-center justify-center xs:text-xl text-[#edb200] opacity-50">
@@ -13,13 +13,13 @@ export default function WhoWeAre() {
         ----
       </div>
       <MyPic />
-      <h4 className="font-bold xs:text-xl nexus7:mt-8 xl:text-4xl">
+      <h4 className=" font-fjalla tracking-wide xs:text-xl nexus7:mt-8 xl:text-4xl">
         Solomon<span className="text-orange-400">Avraham</span>.
       </h4>
       <h5 className="xs:text-sm text-gray-500 xl:text-xl">
         <span className="text-orange-400">OWNER</span>/DEVELOPER
       </h5>{" "}
-      <p className=" font-semibold xs:text-lg p-3 xl:px-52">
+      <p className=" font-reddit xs:text-lg p-3 xl:px-52">
         My name is Solomon, and I'm a full-stack developer with a deep passion
         for my profession. After dedicating over a year to self-study in
         full-stack development, I've honed my skills to not just build websites,

@@ -1,7 +1,14 @@
+"use client";
+
 import Image from "next/image";
 import { FaMobileAlt } from "react-icons/fa";
+import { useTransform, useScroll } from "framer-motion";
+import { MotionDiv } from "@/components/features/motion/motion";
 
 export default function WhatWeDo() {
+  const { scrollYProgress } = useScroll();
+  const scale = useTransform(scrollYProgress, [0, 1], [0.8, 2]);
+
   const servicesExplanation = [
     {
       icon: "/whatWeDo/1.png",
@@ -24,15 +31,19 @@ export default function WhatWeDo() {
   ];
 
   return (
-    <section className=" text-center">
-      <h1 className="xs:text-2xl iPhone5:text-4xl font-bold ">
+    <MotionDiv
+      style={{ scale }}
+      viewport={{ amount: 0 }}
+      className="  text-center"
+    >
+      <h1 className="xs:text-2xl iPhone5:text-4xl font-fjalla tracking-wider ">
         WHAT<span className=" text-orange-400">WE</span>DO
       </h1>
       <div className="mt-1 flex items-center justify-center xs:text-lg iPhone5:text-2xl text-[#edb200] iPhone5Landscape:text-4xl opacity-50">
         ---- <FaMobileAlt />
         ----
       </div>
-      <p className="text-sm iPhone5:text-lg  p-2 font-semibold xl:px-52">
+      <p className="text-sm iPhone5:text-xl  p-2 font-reddit  xl:px-52">
         We're experts in crafting custom web designs and development solutions
         for small businesses globally. Our hand-written code ensures top
         performance, driving traffic and revenue. Whether you're in the US or
@@ -40,11 +51,11 @@ export default function WhatWeDo() {
         success.
       </p>
 
-      <div className="xl:grid grid-cols-3 items-center justify-center xl:px-16 py-10">
+      <div className="xl:grid grid-cols-3 place-items-center  justify-items-center justify-center xl:px-16 py-10">
         {servicesExplanation.map((item, i: number) => (
           <div
             key={i}
-            className="flex flex-col items-center justify-center py-5 p-3 text-sm"
+            className="flex flex-col items-center justify-start justify-center py-5 p-3 text-sm"
           >
             <Image
               priority={true}
@@ -56,18 +67,18 @@ export default function WhatWeDo() {
               className=" "
             />
 
-            <h1 key={item.header} className="font-bold iPhone5:text-xl">
+            <h1 key={item.header} className="font-fjalla iPhone5:text-2xl">
               {item.header}
             </h1>
             <p
               key={item.paragraph}
-              className=" text-sm iPhone5:text-lg px-1 font-semibold"
+              className=" font-reddit text-sm iPhone5:text-base px-1  "
             >
               {item.paragraph}
             </p>
           </div>
         ))}
       </div>
-    </section>
+    </MotionDiv>
   );
 }

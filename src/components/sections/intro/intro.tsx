@@ -10,14 +10,15 @@ export default function Intro() {
 
   return (
     <section className="relative landScape5:mb-44  nexus7:mb-0">
-      <div className="text-white bg-gradient-to-t from-[#f6b94f] via-[#eea236] to-[#edb200] min-h-screen custom-clip-path flex flex-col xl:items-center   px-2">
-        <h1 className="font-Satisfy mt-5 xl:tracking-wide font-extrabold">
-          Small Business
-        </h1>
-        <h2 className=" font-extrabold xl:tracking-wide">
+      <div className="  text-white bg-gradient-to-t from-[#f6b94f] via-[#eea236] to-[#edb200] min-h-screen custom-clip-path flex flex-col xl:items-center   px-2">
+        <h1 className=" font-fjalla mt-5 xl:tracking-widest">Small Business</h1>
+        <hr className="h-1 -mt-9 shadow shadow-slate-200 bg-orange-900 w-1/2 opacity-10 " />
+        <h2 className="-mt-1 font-bebas font-semibold tracking-widest">
           Web Design + Development
         </h2>
-        <p className=" font-semibold">
+        <hr className="h-1 -mt-4 shadow shadow-slate-200 bg-orange-900 w-1/2 opacity-5 " />
+
+        <p className="font-reddit ">
           No WordPress or page builders - We offer 100% hand-coded websites with
           superior results starting at $100/mo.
         </p>
@@ -26,16 +27,16 @@ export default function Intro() {
             type={"submit"}
             px="2"
             py="2"
-            color="bg-gray-100 text-black mt-3 font-semibold"
+            color="bg-gray-100 text-black mt-3 font-light"
             className={
-              "hover:bg-orange-300 hover:text-white iPhone5:text-base iPhone8:text-lg  iPhone8Plus:text-xl landScape8:text-2xl xl:text-lg tracking-wide xl2:text-xl"
+              "hover:bg-orange-300 hover:text-white iPhone5:text-base iPhone8:text-lg  iPhone8Plus:text-xl landScape8:text-2xl xl:text-base tracking-wide xl2:text-xl"
             }
             children={"GET IN TOUCH!"}
           />
         </form>
       </div>
       <div
-        className=" absolute z-10 w-[10rem]  left-14 drop-shadow 
+        className=" absolute z-10 w-[10rem]  left-14 drop-shadow  opacity-95
      iPhone5:w-[13rem] iPhone5:left-20 iPhone5:bottom-[25%]  
    iPhone8:top-[43%] iPhone8:w-[18rem] iPhone8:left-[4rem]
     iPhone8Plus:top-[47%] iPhone8Plus:w-[20rem] iPhone8Plus:left-16
@@ -47,13 +48,13 @@ export default function Intro() {
     ipad:top-[50%] ipad:w-[37rem] ipad:left-[38%]
     ipadMini:top-[40%] ipadMini:w-[40rem] ipadMini:left-[30%]
     ipadPro:top-[36%]
-    xl:top-[30%] xl:left-[20%] xl:w-[28rem]
+    xl:top-[37%] xl:left-[26%] xl:w-[23rem] 
     xl2:top-[28%] xl2:left-[29%] xl2:w-[36rem]"
       >
         <Image
           priority={true}
           src={"/other/screens.png"}
-          alt="logo"
+          alt="screens"
           width={500}
           height={500}
           className=" drop-shadow-2xl"

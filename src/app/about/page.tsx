@@ -15,20 +15,22 @@ export default function About() {
   return (
     <div className="min-h-screen ">
       <div className=" relative h-24  flex items-center justify-center  bg-gradient-to-t from-[#f6b94f] via-[#eea136c0] to-[#edb200]">
-        <div className="text-7xl opacity-5 mb-10 font-bold ">ABOUT</div>
-        <div className="text-5xl tracking-[2rem] opacity-5 font-bold">
+        <div className="text-7xl opacity-5 mb-10 font-bold font-bebas ">
+          ABOUT
+        </div>
+        <div className="text-5xl tracking-[2rem] font-bebas opacity-5 font-bold">
           ABOUT
         </div>{" "}
-        <div className="text-7xl tracking-[2rem] opacity-5 mb-10 font-bold ">
+        <div className="text-7xl font-bebas tracking-[2rem] opacity-5 mb-10 font-bold ">
           ABOUT
         </div>
-        <h1 className=" absolute top-1/4 text-4xl nexus7:text-6xl  tracking-[0.3rem] opacity-60 font-bold ">
+        <h1 className="font-bebas absolute top-[5%] text-4xl nexus7:text-8xl  tracking-[0.7rem] opacity-60 font-bold ">
           ABOUT US
         </h1>
-        <div className="text-9xl  tracking-[2rem] opacity-5 mb-1 font-bold ">
+        <div className="text-9xl font-bebas mt-5 tracking-[2rem] opacity-5 mb-1 font-bold ">
           ABOUT
         </div>
-        <div className="text-5xl  tracking-[2rem] opacity-5 mb-1 font-bold ">
+        <div className="text-5xl font-bebas tracking-[2rem] opacity-5 mb-1 font-bold ">
           ABOUT
         </div>
       </div>
@@ -45,18 +47,18 @@ export default function About() {
       <div className="flex flex-col gap-5 items-center  py-16 mt-10 text-center">
         <MyPic />
 
-        <h4 className="font-bold text-3xl nexus7:text-5xl  ">
+        <h4 className=" font-fjalla tracking-wide text-3xl nexus7:text-5xl  ">
           Solomon<span className="text-orange-400">Avraham</span>.
         </h4>
 
-        <div className=" font-extrabold mb-10 ">
-          <h5 className="text-2xl nexus7:text-4xl xl:text-3xl  tracking-wide">
+        <div className="  mb-10 ">
+          <h5 className="text-2xl nexus7:text-4xl xl:text-3xl  font-fjalla tracking-wider">
             <span className="text-orange-400">DEV</span>SOL
           </h5>
-          <h6 className="text-sm nexus7:text-2xl xl:text-sm">
+          <h6 className="text-sm nexus7:text-2xl xl:text-base font-fjalla tracking-wider">
             WEB DESIGNS <span className="text-orange-400">& DEVELOPMENT</span>
           </h6>
-          <p className="p-3 xl:px-52 text-lg nexus7:text-2xl nexus7:p-10 font-semibold text-center xl:text-lg">
+          <p className="p-3 xl:px-52 text-lg nexus7:text-2xl nexus7:p-10  font-reddit text-center xl:text-xl">
             Giving Small Businesses The Big Business Treatment Hello there! I'm
             Solomon Avraham, the proud owner and sole developer of{" "}
             <span className="text-orange-400">DEV-SOL</span>.<br /> Two years

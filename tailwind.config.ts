@@ -39,8 +39,10 @@ const config: Config = {
         Nokia8110: "240px",
       },
       fontFamily: {
-        Satisfy: ["Satisfy", "cursive"],
-        Neucha: ["Neucha", "cursive"],
+        bebas: ["Bebas Neue", "sans-seri"],
+        fjalla: ["Fjalla One", "sans-seri"],
+        ojuju: ["Ojuju", "sans-seri"],
+        reddit: ["Reddit Mono", "monospace"],
       },
     },
   },

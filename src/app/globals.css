@@ -1,8 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fjalla+One&family=Ojuju:wght@500&family=Reddit+Mono:wght@200..900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Neucha&family=Satisfy&display=swap");
 
 .custom-clip-path {
   clip-path: ellipse(280px 300px at 0% 0%);
@@ -144,7 +144,7 @@
     margin-top: 50px;
   }
   .custom-clip-path > p {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     padding: 1px;
   }
 }
@@ -156,15 +156,12 @@
   .custom-clip-path > h1 {
     font-size: 7rem;
     margin-top: 10px;
-    margin-bottom: 0; /* Add this line */
   }
   .custom-clip-path > h2 {
     font-size: 3rem;
-    margin-top: 0; /* Or add this line */
   }
   .custom-clip-path > p {
-    font-size: 1rem;
-    padding: 2px;
+    font-size: 1.1rem;
   }
 
   .custom-clip-path > * {

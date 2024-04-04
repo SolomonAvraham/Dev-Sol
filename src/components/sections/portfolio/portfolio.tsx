@@ -1,7 +1,15 @@
+"use client";
+
 import PortfolioCard from "@/components/features/portfolioCard/portfolioCard";
 import { MdOutlineWork } from "react-icons/md";
+import { useTransform, useScroll } from "framer-motion";
+import { MotionDiv } from "@/components/features/motion/motion";
 
 export default function Portfolio() {
+  const { scrollYProgress, scrollXProgress } = useScroll();
+  const scaleY = useTransform(scrollYProgress, [1, 1], [1, 1]);
+  const scaleX = useTransform(scrollXProgress, [0, 0], [5, 1]);
+
   const portfolio = [
     {
       pic: "/portfolio/client-pic.png",
@@ -14,8 +22,12 @@ export default function Portfolio() {
   ];
 
   return (
-    <section className="min-h-screen text-center py-10 ">
-      <h1 className="xs:text-xl font-bold iPhone5:text-4xl">
+    <MotionDiv
+      style={{ scaleX: scaleX }}
+      viewport={{ amount: 0 }}
+      className="min-h-screen text-center py-10 "
+    >
+      <h1 className="xs:text-xl iPhone5:text-4xl  font-fjalla tracking-wider">
         <span className=" text-orange-400">OUR</span>PORTFOLIO
       </h1>
       <div className="mt-1 xs:text-lg iPhone5:text-2xl flex items-center justify-center text-base text-[#edb200] opacity-50">
@@ -34,6 +46,6 @@ export default function Portfolio() {
           />
         ))}
       </div>
-    </section>
+    </MotionDiv>
   );
 }

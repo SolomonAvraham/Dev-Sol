@@ -22,17 +22,19 @@ export default function PortfolioCard(props: Props) {
         height={500}
         className=" drop-shadow-xl mt-3 "
       />
-      <h1 className="xs:text-3xl font-bold mt-4 tracking-widest">{name}</h1>
+      <h1 className="xs:text-3xl iPhone5:text-4xl  font-fjalla mt-4 tracking-widest">
+        {name}
+      </h1>
       <hr className="h-[1px] w-3/4 bg-gray-50 " />
-      <h2 className=" text-sm tracking-widest font-semibold text-gray-400 ">
+      <h2 className=" text-lg tracking-widest  font-fjalla text-gray-400 ">
         {location}
       </h2>
-      <p className="xs:text-sm font-semibold p-3">{paragraph}</p>
+      <p className="xs:text-sm font-reddit p-3">{paragraph}</p>
       <Button
         type={"submit"}
         px="2"
         py="2"
-        color="bg-gray-100 text-black mt-3 font-semibold hover:bg-orange-300 hover:text-white"
+        color="bg-gray-100 text-black mt-3 font-light hover:bg-orange-300 hover:text-white"
         className={"mt-4 mb-6 hover:bg-gray-200 xs:text-lg"}
         children={` visit ${name}`}
         onClick={() => window.open(url, "_blank")}
