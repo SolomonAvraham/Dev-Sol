@@ -22,6 +22,10 @@ const config: Config = {
 
         /// Tablet ////
 
+        landScapeIpad: "1024px",
+        landScapeIpadPro: "1112px", 
+        landScapeNexus7: "960px",
+
         ipad: "945px",
         ipadPro: "834px",
         ipadMini: "768px",
@@ -30,8 +34,8 @@ const config: Config = {
         /// IPhones ////
 
         landScape8Plus: "736px",
-        landScape8: "667px",
-        landScape5: "567px",
+        landScape8: "720px",
+        landScape5: "568px",
 
         iPhone8Plus: "414px",
         iPhone8: "375px",

@@ -23,7 +23,15 @@ export default function BusinessModel() {
     },
   ];
   return (
-    <section className="text-center flex flex-col items-center justify-center py-10 ">
+    <section className=" relative text-center flex flex-col items-center justify-center py-10 ">
+      <Image
+        priority={true}
+        src={"/background/2.png"}
+        alt={"design icon"}
+        width={500}
+        height={500}
+        className="-z-10 absolute  -bottom-52 -left-20 filter brightness-[.66] drop-shadow-xl  opacity-10  w-3/6 "
+      />
       <Image
         priority={true}
         src={"/businessModel/1.png"}

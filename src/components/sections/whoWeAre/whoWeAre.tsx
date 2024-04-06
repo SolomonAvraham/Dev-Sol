@@ -1,10 +1,18 @@
 import MyPic from "@/components/features/myPic/myPic";
 import { IoPeople } from "react-icons/io5";
+import Image from "next/image";
 
 export default function WhoWeAre() {
   return (
-    <section className="min-h-screen text-center py-10 flex flex-col items-center justify-center gap-2">
-      {" "}
+    <section className=" relative min-h-screen text-center py-10 flex flex-col items-center justify-center gap-2">
+      <Image
+        priority={true}
+        src={"/background/1.png"}
+        alt={"design icon"}
+        width={500}
+        height={500}
+        className="-z-10 absolute  -top-10 -right-30 filter brightness-[.66] drop-shadow-xl  opacity-5  w-3/6 "
+      />
       <h1 className="xs:text-xl  iPhone5:text-4xl font-fjalla tracking-wider">
         WHO<span className=" text-orange-400">WE</span>ARE
       </h1>

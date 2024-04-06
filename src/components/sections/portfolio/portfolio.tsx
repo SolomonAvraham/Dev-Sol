@@ -2,13 +2,35 @@
 
 import PortfolioCard from "@/components/features/portfolioCard/portfolioCard";
 import { MdOutlineWork } from "react-icons/md";
-import { useTransform, useScroll } from "framer-motion";
 import { MotionDiv } from "@/components/features/motion/motion";
+import {
+  motion,
+  useScroll,
+  useSpring,
+  useTransform,
+  useMotionValue,
+  useVelocity,
+  useAnimationFrame,
+} from "framer-motion";
+import { wrap } from "@motionone/utils";
 
 export default function Portfolio() {
-  const { scrollYProgress, scrollXProgress } = useScroll();
-  const scaleY = useTransform(scrollYProgress, [1, 1], [1, 1]);
-  const scaleX = useTransform(scrollXProgress, [0, 0], [5, 1]);
+  const baseX = useMotionValue(0);
+  const { scrollY } = useScroll();
+  const scrollVelocity = useVelocity(scrollY);
+  const smoothVelocity = useSpring(scrollVelocity, {
+    damping: 50,
+    stiffness: 400,
+  });
+  const velocityFactor = useTransform(smoothVelocity, [1, 11000], [0, 1], {
+    clamp: false,
+  });
+
+  const x = useTransform(baseX, (v) => `${wrap(-50, 50, v)}%`);
+
+  useAnimationFrame(() => {
+    baseX.set(baseX.get() + velocityFactor.get());
+  });
 
   const portfolio = [
     {
@@ -22,11 +44,8 @@ export default function Portfolio() {
   ];
 
   return (
-    <MotionDiv
-      style={{ scaleX: scaleX }}
-      viewport={{ amount: 0 }}
-      className="min-h-screen text-center py-10 "
-    >
+    <section className="min-h-screen text-center py-10 ">
+
       <h1 className="xs:text-xl iPhone5:text-4xl  font-fjalla tracking-wider">
         <span className=" text-orange-400">OUR</span>PORTFOLIO
       </h1>
@@ -34,7 +53,11 @@ export default function Portfolio() {
         ---- <MdOutlineWork />
         ----
       </div>
-      <div className="flex flex-wrap  items-center  gap-12 xl:gap-1 mt-12 container px-3">
+      <MotionDiv
+        style={{ x }}
+        viewport={{ amount: 0 }}
+        className="flex flex-wrap  items-center  gap-12 xl:gap-1 mt-12 container px-3"
+      >
         {portfolio.map((item, i: number) => (
           <PortfolioCard
             key={i}
@@ -45,7 +68,7 @@ export default function Portfolio() {
             url={item.url}
           />
         ))}
-      </div>
-    </MotionDiv>
+      </MotionDiv>
+    </section>
   );
 }

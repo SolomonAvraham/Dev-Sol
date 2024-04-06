@@ -50,18 +50,6 @@ export default function NavBar() {
     return router.push(path);
   };
 
-  // const scrollToSection = (path: string) => {
-  //   setIsOpen(false);
-  //   if (path === "/#portfolio") {
-  //     const element = document.getElementById("portfolio");
-  //     element?.scrollIntoView({ behavior: "smooth" });
-  //     router.push(path);
-  //     <Link href="/#portfolio" />;
-  //     return;
-  //   }
-  //   router.push(path);
-  // };
-
   return (
     <nav
       className={`bg-gradient-to-t from-[#edb200] to-[#eea236] w-full ${
@@ -75,7 +63,10 @@ export default function NavBar() {
           <Logo />
         </div>
         <button
-          className={`text-5xl ml-2 ${isOpen && "text-4xl mr-5"}`}
+          className={`text-5xl ml-2   transition-all duration-300  ease-out ${
+            isOpen &&
+            "text-4xl mr-5 transform transition-all duration-300 rotate-90"
+          }`}
           type="button"
           onClick={() => setIsOpen((val) => !val)}
         >
@@ -90,11 +81,11 @@ export default function NavBar() {
         landScape5:top-[19%] z-20 h-full bg-gradient-to-t from-[#f6b94f] via-[#eea236] to-[#edb200] text-center`}
         >
           <div
-            className={` mt-6 iPhone8:mt-16  flex flex-col gap-12 items-center justify-center
+            className={` mt-6 iPhone8:mt-16  flex flex-col   items-center justify-center
    p-1  text-xl   
-     iPhone5:text-4xl  
-   iPhone8:text-5xl
-    landScape5:text-2xl landScape5:mt-0 landScape5:gap-3
+     iPhone5:text-4xl  iPhone5:gap-9
+     landScape5:text-2xl landScape5:mt-0  landScape5:gap-1  
+   iPhone8:text-5xl iPhone8:gap-12
    landScape8:text-3xl
    landScape8Plus:text-4xl`}
           >
@@ -102,7 +93,8 @@ export default function NavBar() {
               <ul
                 key={item.name}
                 className={` ${
-                  urlActive === item.path && " font-extrabold bg-[#44372468]"
+                  urlActive === item.path &&
+                  " py-1  shadow hover:shadow-xl font-extrabold bg-[#44372468]"
                 } tracking-widest font-bold  ${
                   i % 2 === 0
                     ? "bg-[#eea236] w-full py-1 text-white hover:text-black hover:bg-[#f6b94f]"
@@ -111,7 +103,7 @@ export default function NavBar() {
               >
                 <li
                   key={item.path}
-                  className=" cursor-pointer shadow hover:shadow-xl"
+                  className=" font-ojuju  py-1 cursor-pointer"
                   onClick={() => scrollToSection(item.path)}
                 >
                   {item.name}
@@ -126,25 +118,27 @@ export default function NavBar() {
       </div>
 
       {/* BIG SCREEN */}
-      <div className=" justify-evenly items-center px-12  py-1 hidden nexus7:flex xl:px-0 ">
-        <div className="py-1 w-36 xl:w-80 mr-52">
-          <Logo />
-        </div>
 
-        {pages.map((item, i: number) => (
-          <ul key={item.name} className="text-xl font-semibold">
+      <div
+        className=" nexus7:flex nexus7:text-center landScape8:flex py-1 px-4   items-center   hidden 
+        "
+      >
+        <Logo className="w-screen   p-0 xl:w-3/4" />
+
+        <ul className="  font-semibold landScape8:flex gap-10 px-3 xl:gap-24  ">
+          {pages.map((item, i: number) => (
             <li
               key={i}
               className={`${
                 urlActive === item.path &&
-                " xl:text-black border-b-[1.5px] border-black font-extrabold xl:text-xl pb-1 nexus7:font-fjalla "
-              } cursor-pointer text-white hover:text-black font-ojuju `}
+                " xl:text-black border-b-[1.5px] border-black font-extrabold ipadMini:text-4xl  xl:text-3xl pb-1 nexus7:font-fjalla   "
+              } cursor-pointer text-white hover:text-black font-ojuju text-xl ipadMini:text-2xl xl:text-3xl`}
               onClick={() => scrollToSection(item.path)}
             >
               {item.name}
             </li>
-          </ul>
-        ))}
+          ))}
+        </ul>
       </div>
     </nav>
   );

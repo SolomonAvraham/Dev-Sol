@@ -34,8 +34,16 @@ export default function WhatWeDo() {
     <MotionDiv
       style={{ scale }}
       viewport={{ amount: 0 }}
-      className="  text-center"
+      className="relative  text-center"
     >
+      <Image
+        priority={true}
+        src={"/background/1.png"}
+        alt={"design icon"}
+        width={500}
+        height={500}
+        className="-z-10 absolute top-0 -right-56 filter brightness-[.66] drop-shadow-xl  opacity-10  w-4/6 "
+      />
       <h1 className="xs:text-2xl iPhone5:text-4xl font-fjalla tracking-wider ">
         WHAT<span className=" text-orange-400">WE</span>DO
       </h1>
