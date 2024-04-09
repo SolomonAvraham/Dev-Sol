@@ -8,7 +8,7 @@ import Logo from "../logo/logo";
 export default function NavBar() {
   const router = useRouter();
   const urlActive = usePathname();
-
+ 
   const [isOpen, setIsOpen] = useState(false);
   const [routeToPortfolio, setRouteToPortfolio] = useState(false);
 
