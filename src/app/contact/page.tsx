@@ -10,21 +10,6 @@ import { AiOutlineMail, AiOutlineWhatsApp } from "react-icons/ai";
 import { BsTelephoneInbound } from "react-icons/bs";
 import { PulseLoader } from "react-spinners";
 
-export const socialMedia = [
-  {
-    url: `tel:${adminPhoneNumber}`,
-    icon: <BsTelephoneInbound className=" hover:text-black " />,
-  },
-  {
-    url: `mailto:${adminEmail}`,
-    icon: <AiOutlineMail className=" hover:text-blue-900 " />,
-  },
-  {
-    url: "https://wa.me/972549727138",
-    icon: <AiOutlineWhatsApp className=" hover:text-green-500 " />,
-  },
-];
-
 export default function Contact() {
   const [formData, setFormData] = useState({
     fullName: "",
@@ -35,6 +20,21 @@ export default function Contact() {
   });
   const [loading, setLoading] = useState<boolean>(false);
   const [showMessage, setShowMessage] = useState<boolean>(false);
+
+  const socialMedia = [
+    {
+      url: `tel:${adminPhoneNumber}`,
+      icon: <BsTelephoneInbound className=" hover:text-black " />,
+    },
+    {
+      url: `mailto:${adminEmail}`,
+      icon: <AiOutlineMail className=" hover:text-blue-900 " />,
+    },
+    {
+      url: "https://wa.me/972549727138",
+      icon: <AiOutlineWhatsApp className=" hover:text-green-500 " />,
+    },
+  ];
 
   useEffect(() => {
     setTimeout(() => {
@@ -253,13 +253,14 @@ export default function Contact() {
                       className={
                         "hover:bg-orange-300 hover:text-white iPhone5:text-xl iPhone8:text-lg  iPhone8Plus:text-xl landScape8:text-2xl xl:text-sm tracking-wide  "
                       }
-                      children={"SEND"}
-                    />
+                    >
+                      SEND
+                    </Button>
                   </>
                 )}
 
                 <div className="shadow-md  -tracking-widest border-black  border-e-[0.9px]  cursor-default absolute  -bottom-0  -right-3 iPhone8:-right-7 mx-auto rounded-2xl iPhone8:text-2xl bg-orange-300 px-5 py-1 font-semibold ">
-                  LET'S
+                  LET&apos;S
                   <span className=" text-white drop-shadow-md">TALK</span>.
                 </div>
               </form>

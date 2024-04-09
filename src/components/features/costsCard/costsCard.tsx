@@ -31,9 +31,10 @@ export default function CostsCard() {
         py="2"
         color="bg-gray-100 text-black  font-light hover:bg-orange-300 hover:text-white"
         className={" mt-5 mb-7 hover:bg-gray-200 xs:text-lg"}
-        children={`CONTACT US`}
         onClick={() => router.push("/contact")}
-      />
+      >
+        CONTACT US
+      </Button>
     </div>
   );
 }

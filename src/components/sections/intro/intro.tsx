@@ -30,8 +30,9 @@ export default function Intro() {
             className={
               "hover:bg-orange-300   hover:text-white iPhone5:text-base iPhone8:text-lg  iPhone8Plus:text-xl landScape8:text-2xl xl:text-base tracking-wide xl2:text-xl"
             }
-            children={"GET IN TOUCH!"}
-          />
+          >
+            GET IN TOUCH!
+          </Button>
         </form>
       </div>
       <div

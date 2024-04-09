@@ -36,9 +36,10 @@ export default function PortfolioCard(props: Props) {
         py="2"
         color="bg-gray-100 text-black mt-3 font-light hover:bg-orange-300 hover:text-white"
         className={"mt-4 mb-6 hover:bg-gray-200 xs:text-lg"}
-        children={` visit ${name}`}
         onClick={() => window.open(url, "_blank")}
-      />
+      >
+        visit ${name}
+      </Button>
     </div>
   );
 }

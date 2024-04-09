@@ -81,11 +81,11 @@ export default function About() {
             </h6>
             <p className="p-3 xl:px-52 text-lg nexus7:text-2xl nexus7:p-10  font-reddit text-center xl:text-xl">
               Giving Small Businesses The Big Business Treatment Hello there!
-              I'm Solomon Avraham, the proud owner and sole developer of{" "}
+              I&apos;m Solomon Avraham, the proud owner and sole developer of{" "}
               <span className="text-orange-400">DEV-SOL</span>.<br /> Two years
               ago, I embarked on a journey into programming after mastering
               coding skills. Finding employment was challenging due to the
-              unstable job market. That's when I decided to take matters into my
+              unstable job market. That&apos;s when I decided to take matters into my
               own hands and establish{" "}
               <span className="text-orange-400">DEV-SOL</span>.<br /> My focus
               is on assisting small businesses in promoting their ventures,
@@ -102,12 +102,12 @@ export default function About() {
               ensuring that small businesses can have a professional online
               presence without straining their finances.
               <br />
-              At <span className="text-orange-400">DEV-SOL</span>, I'm committed
+              At <span className="text-orange-400">DEV-SOL</span>, I&apos;m committed
               to delivering top-notch websites that reflect the essence and
               aspirations of each business. My goal is to empower small
-              businesses with the tools they need to thrive in today's
-              competitive landscape. Let's work together to elevate your
-              business's online presence and unlock its full potential.
+              businesses with the tools they need to thrive in today&apos;s
+              competitive landscape. Let&apos;s work together to elevate your
+              business&apos;s online presence and unlock its full potential.
             </p>
           </div>
         </div>

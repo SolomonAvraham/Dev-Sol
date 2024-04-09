@@ -57,7 +57,7 @@ export default function NavBar() {
       }`}
     >
       <div
-        className={`flex justify-between items-center px-5  py-1 nexus7:hidden`}
+        className={` flex justify-between items-center px-5  py-1 nexus7:hidden`}
       >
         <div className="logo w-36">
           <Logo />
@@ -77,7 +77,9 @@ export default function NavBar() {
             opacity: isOpen ? 1 : 0,
             transition: "opacity 500ms ease-in",
           }}
-          className={`fixed w-full left-0 top-1 iPhone5:top-[10%] iPhone8:top-[8%]
+          className={`${
+            !isOpen && "hidden"
+          } fixed w-full left-0 top-1 iPhone5:top-[10%] iPhone8:top-[8%]
         landScape5:top-[19%] z-20 h-full bg-gradient-to-t from-[#f6b94f] via-[#eea236] to-[#edb200] text-center`}
         >
           <div

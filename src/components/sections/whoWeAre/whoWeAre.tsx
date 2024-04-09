@@ -28,14 +28,14 @@ export default function WhoWeAre() {
         <span className="text-orange-400">OWNER</span>/DEVELOPER
       </h5>{" "}
       <p className=" font-reddit xs:text-lg p-3 xl:px-52">
-        My name is Solomon, and I'm a full-stack developer with a deep passion
+        My name is Solomon, and I&apos;m a full-stack developer with a deep passion
         for my profession. After dedicating over a year to self-study in
-        full-stack development, I've honed my skills to not just build websites,
+        full-stack development, I&apos;ve honed my skills to not just build websites,
         but to craft digital experiences. My journey into web development was
         driven by my desire to offer my expertise to clients while engaging in
         work I truly love. Having built numerous sites, each project has been a
         step in refining my approach and solidifying my commitment to
-        excellence. I'm here to bring your vision to life with dedication and
+        excellence. I&apos;m here to bring your vision to life with dedication and
         precision, eager to provide top-notch services to my clients.
       </p>
     </section>

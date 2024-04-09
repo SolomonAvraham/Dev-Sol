@@ -25,7 +25,7 @@ export default function Button({
       className={`${className} text-xs px-${px} py-${py} rounded  ${color} cursor-pointer`}
       onClick={onClick}
     >
-      <span className=" animate-bounce">{children}</span>
+      {children}
     </button>
   );
 }

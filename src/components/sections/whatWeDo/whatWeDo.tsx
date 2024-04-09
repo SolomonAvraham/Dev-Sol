@@ -52,11 +52,11 @@ export default function WhatWeDo() {
         ----
       </div>
       <p className="text-sm iPhone5:text-xl  p-2 font-reddit  xl:px-52">
-        We're experts in crafting custom web designs and development solutions
+        We&apos;re experts in crafting custom web designs and development solutions
         for small businesses globally. Our hand-written code ensures top
-        performance, driving traffic and revenue. Whether you're in the US or
-        anywhere else, we're here to boost your online presence and business
-        success.
+        performance, driving traffic and revenue. Whether you&apos;re in the US or
+        anywhere else, we&apos;re here to boost your online presence and
+        business success.
       </p>
 
       <div className="xl:grid grid-cols-3 place-items-center  justify-items-center justify-center xl:px-16 py-10">
