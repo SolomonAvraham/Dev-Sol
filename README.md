@@ -31,7 +31,7 @@ We would love to hear from you! Whether you have a question about our services, 
 
 Email: Solomon.Avraham31@gmail.com
 Phone: 0549727138
-Visit our website: DevSolDev
+Visit our website: <a href="https://www.devsoldev.com/" target="_blank" >DevSolDev</a>
 
 License
 This project is licensed under the MIT License - see the LICENSE file for details.
