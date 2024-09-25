@@ -18,7 +18,7 @@ export default function CostsCard() {
       <hr className="opacity-90 w-full bg-black" />
       <div className=" text-2xl font-bebas nexus7:text-3xl  xl:text-3xl py-3">
         $ 75/MO
-      </div>
+      </div> 
       <hr className="opacity-90 w-full bg-black" />
       <p className=" font-reddit p-3  text-base nexus7:text-2xl  xl:text-base">
         Unlimited Edits, Includes Hosting 24/7, Customer Service and Lifetime
