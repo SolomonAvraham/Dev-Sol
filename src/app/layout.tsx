@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import NavBar from "src/components/features/navBar/NavBar";
 import Footer from "src/components/features/footer/footer";
- 
+import NavBar from "src/components/features/navBar/NavBar";
+
 export const metadata: Metadata = {
   title: "Dev-Sol Web Design + Development",
   description:
