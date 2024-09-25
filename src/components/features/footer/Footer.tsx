@@ -6,6 +6,7 @@ import { redirect, useRouter } from "next/navigation";
 import Logo from "../logo/logo";
 import { adminEmail, adminPhoneNumber } from "@/utils/shortCut";
 
+
 export default function Footer() {
   const router = useRouter();
 
