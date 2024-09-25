@@ -49,7 +49,7 @@ export default function NavBar() {
     }
     return router.push(path);
   };
-
+ 
   return (
     <nav
       className={`bg-gradient-to-t from-[#edb200] to-[#eea236] w-full ${
