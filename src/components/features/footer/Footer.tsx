@@ -51,7 +51,7 @@ export default function Footer() {
       <div className="flex flex-col p-1">
         <Logo />
         <div className=" flex flex-col justify-center items-start text-white xl:ml-10">
-          <h5 className=" tracking-widest  font-fjalla drop-shadow-2xl iPhone8:text-lg xl:text-2xl">
+          <h5 className=" tracking-widest  font-fjalla drop-shadow-2xl text-2xl">
             NAVIGATION
           </h5>
           <hr className=" w-[60%] border-[#ffbe4d]  border-[1px] outline-[#000] outline-8 h-1 shadow-xl bg-white bg-opacity-25 " />
@@ -61,7 +61,7 @@ export default function Footer() {
               {navigation.map((item, i: number) => (
                 <ul
                   key={i}
-                  className="text-xs text-left  iPhone5Landscape:text-lg"
+                  className="text-xl text-left"
                 >
                   <li
                     onClick={() => redirectURL(item.path)}
@@ -79,12 +79,12 @@ export default function Footer() {
       </div>
 
       <div className=" flex flex-col justify-center items-end text-white  xl:mr-10">
-        <h5 className=" xl:text-2xl iPhone8:text-lg tracking-widest  font-bebas drop-shadow-2xl mr-2 iPhone5Landscape:text-2xl">
+        <h5 className=" text-2xl tracking-widest  font-bebas drop-shadow-2xl mr-2">
           SERVICES
         </h5>
         <hr className=" w-[60%] border-[#ffbe4d]  border-[1px] outline-[#000] outline-8 h-1 shadow-xl bg-white bg-opacity-25 " />
         {services.map((item, i: number) => (
-          <ul key={i} className="text-xs iPhone8:text-base text-right mr-1 ">
+          <ul key={i} className="text-xl text-right mr-1 ">
             <li
               key={item.name}
               className="xl:text-lg   mt-1 font-ojuju font-semibold tracking-wide  cursor-default"
@@ -95,7 +95,7 @@ export default function Footer() {
         ))}
       </div>
 
-      <div className="xs:text-sm  iPhone8:text-base  text-center cursor-pointer text-white font-reddit flex flex-col mt-10 mb-3">
+      <div className="  text-center cursor-pointer text-white font-reddit flex flex-col mt-10 mb-3">
         <span className="hover:text-gray-700 ">{adminEmail}</span>
         <span className="hover:text-gray-700 ">{adminPhoneNumber}</span>
       </div>

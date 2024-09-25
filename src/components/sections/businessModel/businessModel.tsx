@@ -23,7 +23,7 @@ export default function BusinessModel() {
     },
   ];
   return (
-    <section className=" relative text-center flex flex-col items-center justify-center py-10 ">
+    <section className=" relative text-center flex flex-col items-center justify-center py-10 mt-36">
       <Image
         priority={true}
         src={"/background/2.png"}
@@ -41,12 +41,12 @@ export default function BusinessModel() {
         className="xs:w-44 xl:w-[23rem] xl:hidden block "
       />
       <h1 className="text-xl px-1 iPhone5:text-4xl  font-fjalla mt-5 ">
-        <span className="text-orange-400">$100</span> Per Month, 12 Month
+        <span className="text-orange-400">$75</span> Per Month, 12 Month
         Minimum Contract
       </h1>
       <div className="xl:px-52">
         <p className="text-sm iPhone5:text-lg p-3  font-reddit ">
-          $100 a month for a standard 5 page small business website. If you need
+          $75 a month for a standard 5 page small business website. If you need
           more than that then we have to do custom pricing based on the scope of
           work, number of additional pages, and time involved.
         </p>

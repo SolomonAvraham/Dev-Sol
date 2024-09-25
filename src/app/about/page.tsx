@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: `Giving Small Businesses The Big Business Treatment Hello there! I'm Solomon Avraham, the proud owner and sole developer of DEV-SOL.
 Two years ago, I embarked on a journey into programming after mastering coding skills. Finding employment was challenging due to the unstable job market. That's when I decided to take matters into my own hands and establish DEV-SOL.
 My focus is on assisting small businesses in promoting their ventures, whether locally or globally. I started by crafting websites meticulously by hand and reaching out to small businesses to offer my assistance. What I discovered was a common challenge: many small businesses struggled to afford high-quality websites. Those who did invest often found themselves with subpar results, trapped in outdated design trends.
-Recognizing this frustration, I pivoted my business model to better serve their needs. Thus, I introduced the $100 a month model. This approach offers affordability and flexibility, ensuring that small businesses can have a professional online presence without straining their finances.
+Recognizing this frustration, I pivoted my business model to better serve their needs. Thus, I introduced the $75 a month model. This approach offers affordability and flexibility, ensuring that small businesses can have a professional online presence without straining their finances.
 At DEV-SOL, I'm committed to delivering top-notch websites that reflect the essence and aspirations of each business. My goal is to empower small businesses with the tools they need to thrive in today's competitive landscape. Let's work together to elevate your business's online presence and unlock its full potential.`,
 };
 
@@ -97,7 +97,7 @@ export default function About() {
               in outdated design trends.
               <br />
               Recognizing this frustration, I pivoted my business model to
-              better serve their needs. Thus, I introduced the $100 a month
+              better serve their needs. Thus, I introduced the $75 a month
               model. This approach offers affordability and flexibility,
               ensuring that small businesses can have a professional online
               presence without straining their finances.

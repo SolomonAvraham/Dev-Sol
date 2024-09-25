@@ -17,7 +17,7 @@ export default function CostsCard() {
       </div>
       <hr className="opacity-90 w-full bg-black" />
       <div className=" text-2xl font-bebas nexus7:text-3xl  xl:text-3xl py-3">
-        $ 100/MO
+        $ 75/MO
       </div>
       <hr className="opacity-90 w-full bg-black" />
       <p className=" font-reddit p-3  text-base nexus7:text-2xl  xl:text-base">

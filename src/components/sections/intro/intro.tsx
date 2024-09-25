@@ -19,7 +19,7 @@ export default function Intro() {
         <hr className="h-1 landScape5:w-7/12 -mt-2 shadow shadow-slate-200 bg-orange-900 opacity-5 " />
         <p className="font-reddit ">
           No WordPress or page builders - We offer 100% hand-coded websites with
-          superior results starting at $100/mo.
+          superior results starting at $75/mo.
         </p>
         <form action={redirectURL} className="xl:ml-32 cursor-pointer">
           <Button
@@ -54,7 +54,7 @@ export default function Intro() {
     landScapeIpadPro:top-[39%] landScapeIpadPro:w-full landScapeIpadPro:left-72 landScapeIpadPro:right- landScapeIpadPro:mx-auto
 landScapeIpad:top-[39%]
 
-
+ 
     xl:top-[38%] xl:left-[26%] xl:w-[45rem]  xl:mx-auto
     xl2:top-[28%] xl2:left-[29%] xl2:w-[36rem]"
       >

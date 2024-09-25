@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import NavBar from "src/components/features/navBar/navBar";
+import NavBar from "src/components/features/navBar/NavBar";
 import Footer from "src/components/features/footer/footer";
+
 export const metadata: Metadata = {
   title: "Dev-Sol Web Design + Development",
   description:
@@ -63,7 +64,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en",
     url: process.env.DOMAIN as string,
-    title: "Dev-Sol",
+    title: "DEV-SOL",
   },
   robots: {
     index: true,
@@ -79,7 +80,7 @@ export const metadata: Metadata = {
   },
   applicationName: "Dev-Sol",
   appleWebApp: {
-    title: "Dev-Sol",
+    title: "DEV-SOL",
     statusBarStyle: "default",
     capable: true,
   },
@@ -98,7 +99,7 @@ export default function RootLayout({
           rel="icon"
           href="/logo/small-logo.png"
           type="image/png"
-          sizes="500*500"
+          sizes="150*150"
         />
       </head>
       <body>
