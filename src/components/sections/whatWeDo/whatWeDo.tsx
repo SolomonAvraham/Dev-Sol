@@ -34,7 +34,7 @@ export default function WhatWeDo() {
     <MotionDiv
       style={{ scale }}
       viewport={{ amount: 0 }}
-      className="relative  text-center"
+      className="relative text-center"
     >
       <Image
         priority={true}
@@ -63,7 +63,7 @@ export default function WhatWeDo() {
         {servicesExplanation.map((item, i: number) => (
           <div
             key={i}
-            className="flex flex-col items-center justify-start justify-center py-5 p-3 text-sm"
+            className="flex flex-col items-center justify-center py-5 p-3 text-sm"
           >
             <Image
               priority={true}

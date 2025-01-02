@@ -1,147 +1,142 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { IoMdMenu } from "react-icons/io";
+import { useEffect, useState, useRef } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import Logo from "../logo/logo";
 
 export default function NavBar() {
   const router = useRouter();
   const urlActive = usePathname();
- 
   const [isOpen, setIsOpen] = useState(false);
   const [routeToPortfolio, setRouteToPortfolio] = useState(false);
-
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [isOpen]);
+  const dropdownRef = useRef<HTMLUListElement>(null);
 
   const pages = [
     { name: "HOME", path: "/" },
     { name: "ABOUT", path: "/about" },
     { name: "PORTFOLIO", path: "/#portfolio" },
-    // { name: "SERVICES", path: "/services" },
     { name: "CONTACT", path: "/contact" },
   ];
 
   useEffect(() => {
-    if (routeToPortfolio) {
-      router.push("/");
-      setRouteToPortfolio(false);
-      const element = document.getElementById("#portfolio");
-      return element?.scrollIntoView({ behavior: "smooth" });
-    } else {
-    }
-  }, [routeToPortfolio, urlActive]);
+    document.body.style.overflow = isOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
 
-  const scrollToSection = (path: string) => {
-    setIsOpen(false);
-    if (path === "/#portfolio") {
-      return setRouteToPortfolio(true);
+  useEffect(() => {
+    if (routeToPortfolio) {
+      const handlePortfolioNavigation = async () => {
+        // If we're not on the home page, navigate first
+        if (urlActive !== "/") {
+          await router.push("/");
+          // Wait for navigation and DOM update
+          setTimeout(() => {
+            const portfolioSection = document.getElementById("#portfolio");
+            if (portfolioSection) {
+              portfolioSection.scrollIntoView({ behavior: "smooth" });
+            }
+          }, 100);
+        } else {
+          // If we're already on home page, just scroll
+          const portfolioSection = document.getElementById("#portfolio");
+          if (portfolioSection) {
+            portfolioSection.scrollIntoView({ behavior: "smooth" });
+          }
+        }
+        setRouteToPortfolio(false);
+      };
+
+      handlePortfolioNavigation();
     }
-    return router.push(path);
+  }, [routeToPortfolio, urlActive, router]);
+
+  const handleNavigation = (path: string) => {
+    setIsOpen(false);
+    if (dropdownRef.current) {
+      dropdownRef.current.tabIndex = -1;
+      dropdownRef.current.blur();
+    }
+
+    if (path === "/#portfolio") {
+      setRouteToPortfolio(true);
+    } else {
+      router.push(path);
+    }
   };
- 
+
   return (
-    <nav
-      className={`bg-gradient-to-t from-[#edb200] to-[#eea236] w-full ${
-        isOpen && " fixed top-0 z-50 transition-all duration-300"
-      }`}
-    >
-      <div
-        className={` flex justify-between items-center px-5  py-1 nexus7:hidden`}
-      >
-        <div className="logo w-36">
+    <div className="navbar bg-[#eea236] text-white z-50">
+      <div className="navbar-start">
+        <div className="w-36">
           <Logo />
-        </div>
-        <button
-          className={`text-5xl ml-2   transition-all duration-300  ease-out ${
-            isOpen &&
-            "text-4xl mr-5 transform transition-all duration-300 rotate-90"
-          }`}
-          type="button"
-          onClick={() => setIsOpen((val) => !val)}
-        >
-          {isOpen ? "X" : <IoMdMenu />}
-        </button>{" "}
-        <div
-          style={{
-            opacity: isOpen ? 1 : 0,
-            transition: "opacity 500ms ease-in",
-          }}
-          className={`${
-            !isOpen && "hidden"
-          } fixed w-full left-0 top-1 iPhone5:top-[10%] iPhone8:top-[8%]
-        landScape5:top-[19%] z-20 h-full bg-gradient-to-t from-[#f6b94f] via-[#eea236] to-[#edb200] text-center`}
-        >
-          <div
-            className={` mt-6 iPhone8:mt-16  flex flex-col   items-center justify-center
-   p-1  text-xl   
-     iPhone5:text-4xl  iPhone5:gap-9
-     landScape5:text-2xl landScape5:mt-0  landScape5:gap-1  
-   iPhone8:text-5xl iPhone8:gap-12
-   landScape8:text-3xl
-   landScape8Plus:text-4xl`}
-          >
-            {pages.map((item, i: number) => (
-              <ul
-                key={item.name}
-                className={` ${
-                  urlActive === item.path &&
-                  " py-1  shadow hover:shadow-xl font-extrabold bg-[#44372468]"
-                } tracking-widest font-bold  ${
-                  i % 2 === 0
-                    ? "bg-[#eea236] w-full py-1 text-white hover:text-black hover:bg-[#f6b94f]"
-                    : "bg-[#f6b94f] w-full py-1 text-white hover:text-black hover:bg-[#eea236]"
-                }`}
-              >
-                <li
-                  key={item.path}
-                  className=" font-ojuju  py-1 cursor-pointer"
-                  onClick={() => scrollToSection(item.path)}
-                >
-                  {item.name}
-                </li>
-              </ul>
-            ))}
-            <div className=" landScape5:w-32  iPhone8:-mt-7 iPhone8Plus:-mt-0">
-              <Logo />
-            </div>
-          </div>
         </div>
       </div>
 
-      {/* BIG SCREEN */}
-
-      <div
-        className=" nexus7:flex nexus7:text-center landScape8:flex py-1 px-4   items-center   hidden 
-        "
-      >
-        <Logo className="w-screen   p-0 xl:w-3/4" />
-
-        <ul className="  font-semibold landScape8:flex gap-10 px-3 xl:gap-24  ">
-          {pages.map((item, i: number) => (
-            <li
-              key={i}
-              className={`${
-                urlActive === item.path &&
-                " xl:text-black border-b-[1.5px] border-black font-extrabold ipadMini:text-4xl  xl:text-3xl pb-1 nexus7:font-fjalla   "
-              } cursor-pointer text-white hover:text-black font-ojuju text-xl ipadMini:text-2xl xl:text-3xl`}
-              onClick={() => scrollToSection(item.path)}
+      {/* Mobile Menu */}
+      <div className="navbar-end md:hidden bg-[#eea236]">
+        <div className="dropdown dropdown-end bg-[#eea236] text-white">
+          <label
+            tabIndex={0}
+            className="btn btn-ghost"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            <svg
+              className="h-12 w-12"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
             >
-              {item.name}
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </label>
+          <ul
+            ref={dropdownRef}
+            tabIndex={0}
+            className={`bg-[#eea236] border-black border-[0.1px] menu menu-md dropdown-content mt-3 p-2 shadow grid place-items-center rounded-box w-[50vh]   z-50 ${
+              isOpen ? "block" : "hidden"
+            }`}
+          >
+            {pages.map((item) => (
+              <li key={item.name} className="border-b-2 border-[#ffbe4d]">
+                <button
+                  onClick={() => handleNavigation(item.path)}
+                  className={`${
+                    urlActive === item.path ? "font-bold" : ""
+                  } text-5xl font-fjalla tracking-widest`}
+                >
+                  {item.name}
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+      {/* Desktop Menu */}
+      <div className="navbar-end hidden md:flex">
+        <ul className="menu menu-horizontal gap-4 w- font-fjalla tracking-widest">
+          {pages.map((item) => (
+            <li
+              key={item.name}
+              onClick={() => handleNavigation(item.path)}
+              className={`hover:text-black lg:w-32 text-center cursor-pointer ${
+                urlActive === item.path
+                  ? "font-semibold border-b-[1px] text-xl text-black rounded-lg"
+                  : " text-white"
+              }`}
+            >
+              {item.name}{" "}
             </li>
           ))}
         </ul>
       </div>
-    </nav>
+    </div>
   );
 }

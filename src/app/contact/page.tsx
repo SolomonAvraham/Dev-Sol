@@ -85,39 +85,18 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen">
-      <div className=" relative h-24  landScape8:top-[10%]   flex items-center justify-center  bg-gradient-to-t from-[#f6b94f] via-[#eea136c0] to-[#edb200]">
-        <div className="text-7xl opacity-5 mb-10 font-bold font-bebas">
-          CONTACT
-        </div>
-        <div className="text-5xl tracking-[2rem] opacity-5 font-bold font-bebas">
-          CONTACT
-        </div>{" "}
-        <div className="text-7xl tracking-[2rem] opacity-5 mb-10 font-bold font-bebas">
-          CONTACT
-        </div>
-        <h1 className="font-bebas absolute top-[5%] text-4xl nexus7:text-8xl  tracking-[0.7rem] opacity-60 font-bold ">
-          CONTACT US
-        </h1>
-        <div className="text-9xl tracking-[2rem] opacity-5 mt-2 font-bold font-bebas">
-          CONTACT
-        </div>{" "}
-        <div className="text-6xl  tracking-[2rem] opacity-5 mb-1 font-bold font-bebas">
-          CONTACT
-        </div>
-      </div>
-
-      <Image
+    <div className="min-h-screen grid place-items-center py-20">
+      {/* <Image
         priority={true}
         src={"/page/contact.jpeg"}
         alt="s"
         width={500}
         height={500}
         className=" mx-auto nexus7:w-full xl:w-[16rem]  rounded-b-3xl shadow-md mb-20 "
-      />
+      /> */}
 
       <div className=" relative">
-        <Image
+        {/* <Image
           priority={true}
           src={"/background/2.png"}
           alt={"design icon"}
@@ -132,8 +111,8 @@ export default function Contact() {
           width={500}
           height={500}
           className="-z-10 absolute  top-64 transform  rotate-45 left-[18rem]    filter brightness-[.66] drop-shadow-xl  opacity-[0.07]  w-[25%] "
-        />
-        <div className="w-fit px-5 flex justify-center items-center mx-auto gap-8 rounded-3xl bg-[#f6b94f] py-3 text-3xl text-white shadow-lg border-s-[0.1px] border-e-[0.1px] border-black">
+        /> */}
+        <div className="w-fit px-5 flex justify-center items-center mx-auto gap-8 rounded-3xl bg-[#f6b94f] py-3 text-xl text-white shadow-lg   border-black">
           {socialMedia.map((item, index: number) => (
             <Link
               className=" hover:scale-150  "
@@ -146,9 +125,10 @@ export default function Contact() {
             </Link>
           ))}
         </div>
+
         <div className="  ">
           <div className=" nexus7:flex gap-24 justify-center items-center">
-            <div className="xs:text-sm  gap-3 iPhone8:text-base   text-center  font-bold flex flex-col py-10">
+            <div className="xs:text-sm   gap-3 iPhone8:text-base   text-center  font-bold flex flex-col py-10">
               <div className="flex flex-col  nexus7:text-lg w-1/2 items-start mx-auto justify-center border-orange-300 text-gray-500  border-l-2 pl-2 text-sm">
                 <span className=" cursor-default font-fjalla">Email:</span>
                 <Link
@@ -184,9 +164,9 @@ export default function Contact() {
               )}
               <form
                 onSubmit={handleSubmit}
-                className=" shadow-lg border-black border-b-[0.9px] border-s-[0.9px] border-e-[0.5px] relative w-[17rem] nexus7:w-[19rem] mx-auto bg-orange-300 py-11 px-5 rounded-lg "
+                className=" shadow-lg border-black border-b-[0.9px] border-s-[0.9px] border-e-[0.5px] relative w-[17rem] nexus7:w-[19rem] mx-auto bg-[#f6b94f] py-11 px-5 rounded-lg "
               >
-                <div className=" -tracking-widest border-black border-t-[0.9px]  border-s-[0.9px]  cursor-default absolute -top-5   -right-0 mx-auto rounded-2xl text-[26px] iPhone8:text-3xl nexus7:text-4xl bg-orange-300 px-7 py-1 font-semibold shadow-md ">
+                <div className=" -tracking-widest border-black  border-s-[2px] border-[0.1px]  cursor-default absolute -top-5   -right-0 mx-auto rounded-2xl text-[26px] iPhone8:text-3xl nexus7:text-4xl bg-[#f6b94f] px-7 py-1 font-semibold shadow-md ">
                   WRITE<span className=" text-white drop-shadow-md">US</span>A
                   <span className=" text-white drop-shadow-md">MESSAGE</span>.
                 </div>
@@ -224,7 +204,7 @@ export default function Contact() {
                               formData[field.name as keyof typeof formData]
                             }
                             onChange={handleChange}
-                            className="w-full px-3 py-2 border rounded-md"
+                            className="w-full px-3 py-2 border rounded-md bg-white placeholder:text-center "
                             rows={5}
                             required
                             placeholder={field.label}
@@ -238,7 +218,7 @@ export default function Contact() {
                               formData[field.name as keyof typeof formData]
                             }
                             onChange={handleChange}
-                            className="w-full px-3 py-2 border rounded-md"
+                            className="w-full bg-white placeholder:text-center px-3 py-2 border-[2px] rounded-md"
                             required
                             placeholder={field.label}
                           />
@@ -249,7 +229,7 @@ export default function Contact() {
                       type={"submit"}
                       px="3"
                       py="2"
-                      color="bg-gray-100 text-black mt-3 font-semibold"
+                      color="bg-gray-100 rounded-lg text-black mt-3 border-[1px] border-black font-semibold"
                       className={
                         "hover:bg-orange-300 hover:text-white iPhone5:text-xl iPhone8:text-lg  iPhone8Plus:text-xl landScape8:text-2xl xl:text-sm tracking-wide  "
                       }
@@ -259,7 +239,7 @@ export default function Contact() {
                   </>
                 )}
 
-                <div className="shadow-md  -tracking-widest border-black  border-e-[0.9px]  cursor-default absolute  -bottom-0  -right-3 iPhone8:-right-7 mx-auto rounded-2xl iPhone8:text-2xl bg-orange-300 px-5 py-1 font-semibold ">
+                <div className="shadow-md  -tracking-widest border-black  border-e-[2px] border-[1px]  cursor-default absolute  -bottom-0  -right-3 iPhone8:-right-7 mx-auto rounded-2xl iPhone8:text-2xl bg-[#f6b94f] px-5 py-1 font-semibold ">
                   LET&apos;S
                   <span className=" text-white drop-shadow-md">TALK</span>.
                 </div>

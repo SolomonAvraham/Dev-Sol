@@ -19,6 +19,13 @@ export default function Portfolio() {
         "Barberas, a centrally-located barber shop in Hadera, offers easy appointment scheduling. Our robust management system enhances efficiency for both the business owner and customers, eliminating unnecessary small talk.",
       url: "https://www.barberas.co.il",
     },
+    {
+      pic: "/portfolio/i-dai-screens.png",
+      name: "I-DAI",
+      paragraph:
+        "The I-DAI app is a predictive platform that analyzes user-provided data, such as age and health status, to forecast potential causes of death. By offering personalized insights, the app aims to increase awareness and encourage proactive health measures.",
+      url: "https://www.i-dai.com",
+    },
   ];
 
   return (
@@ -30,7 +37,7 @@ export default function Portfolio() {
         ---- <MdOutlineWork />
         ----
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 md:w-1/2 md:mx-auto gap-20 mt-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:gap-10 md:w-9/12   mx-auto gap-20 mt-12">
         {portfolio.map((item, i: number) => (
           <PortfolioCard
             key={i}

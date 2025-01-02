@@ -14,34 +14,16 @@ At DEV-SOL, I'm committed to delivering top-notch websites that reflect the esse
 export default function About() {
   return (
     <div className="min-h-screen ">
-      <div className=" relative h-24  flex items-center justify-center  bg-gradient-to-t from-[#f6b94f] via-[#eea136c0] to-[#edb200]">
-        <div className="text-9xl opacity-5  font-bold font-bebas ">ABOUT</div>
-        <div className="text-7xl tracking-[2rem] font-bebas opacity-5 font-bold">
-          ABOUT
-        </div>{" "}
-        <div className="text-7xl font-bebas tracking-[2rem] opacity-5 mb-10 font-bold ">
-          ABOUT
-        </div>
-        <h1 className="font-bebas absolute top-[5%] text-4xl nexus7:text-8xl  tracking-[0.7rem] opacity-60 font-bold ">
-          ABOUT US
-        </h1>
-        <div className="text-9xl font-bebas mt-5 tracking-[2rem] opacity-5 mb-1 font-bold ">
-          ABOUT
-        </div>
-        <div className="text-4xl font-bebas tracking-[2rem] opacity-5 mb-1 font-bold ">
-          ABOUT
-        </div>
-      </div>
-
-      <div className="dd">
-        <Image
+      
+      <div className=" ">
+        {/* <Image
           priority={true}
           src={"/page/about.jpeg"}
           alt="s"
           width={500}
           height={500}
           className=" mx-auto nexus7:w-full xl:w-[16rem]  rounded-b-3xl shadow-md "
-        />
+        /> */}
 
         <div className=" relative flex flex-col gap-5 items-center  py-16 mt-10 text-center">
           <MyPic />

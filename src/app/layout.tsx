@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Footer from "src/components/features/footer/Footer";
 import NavBar from "src/components/features/navBar/NavBar";
+import { CurvedBottom } from "@/components/layouts/curvedLayouts";
 
 export const metadata: Metadata = {
   title: "Dev-Sol Web Design + Development",
@@ -106,9 +107,10 @@ export default function RootLayout({
         <header>
           <NavBar />
         </header>
-        <main className="min-h-screen overflow-hidden landScape8:mt-0 ">
+        <main className="min-h-screen overflow-hidden  bg-white text-black">
           {children}
         </main>
+        <CurvedBottom />
         <Footer />
       </body>
     </html>
